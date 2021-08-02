@@ -1,5 +1,0 @@
-Start:		1627883386.4973953
-Command:	auditctl -l | grep access
-Output:
-
-End:		1627883386.517873

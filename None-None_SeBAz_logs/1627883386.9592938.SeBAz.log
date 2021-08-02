@@ -1,6 +1,0 @@
-Start:		1627883386.9594064
-Command:	sshd -T | grep banner
-Output:
-banner /etc/issue.net
-
-End:		1627883386.9911647

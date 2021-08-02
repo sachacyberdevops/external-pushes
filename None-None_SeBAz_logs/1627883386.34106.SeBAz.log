@@ -1,6 +1,0 @@
-Start:		1627883386.3411486
-Command:	systemctl is-enabled auditd
-Output:
-enabled
-
-End:		1627883386.367626

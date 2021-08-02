@@ -1,6 +1,0 @@
-Start:		1627883386.3289907
-Command:	grep action_mail_acct /etc/audit/auditd.conf
-Output:
-action_mail_acct = root
-
-End:		1627883386.34405

@@ -1,6 +1,0 @@
-Start:		1627883386.045189
-Command:	sysctl net.ipv4.conf.all.rp_filter
-Output:
-net.ipv4.conf.all.rp_filter = 1
-
-End:		1627883386.0667431

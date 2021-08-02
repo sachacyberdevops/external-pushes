@@ -1,5 +1,0 @@
-Start:		1627883384.924815
-Command:	mount | grep /var/log/audit
-Output:
-
-End:		1627883384.9651687

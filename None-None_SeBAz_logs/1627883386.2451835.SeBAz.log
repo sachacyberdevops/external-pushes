@@ -1,7 +1,0 @@
-Start:		1627883386.245284
-Command:	ss -6tuln
-Output:
-Netid  State    Recv-Q   Send-Q      Local Address:Port     Peer Address:Port   
-tcp    LISTEN   0        128                  [::]:22               [::]:*      
-
-End:		1627883386.2575266

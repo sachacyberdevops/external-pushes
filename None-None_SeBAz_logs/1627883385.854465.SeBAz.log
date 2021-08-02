@@ -1,6 +1,0 @@
-Start:		1627883385.8546112
-Command:	sysctl net.ipv4.conf.all.send_redirects
-Output:
-net.ipv4.conf.all.send_redirects = 0
-
-End:		1627883385.868733

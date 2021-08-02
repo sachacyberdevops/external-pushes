@@ -1,5 +1,0 @@
-Start:		1627883384.9875085
-Command:	mount | grep -E '\s/dev/shm\s' | grep -v nosuid
-Output:
-
-End:		1627883385.0228305

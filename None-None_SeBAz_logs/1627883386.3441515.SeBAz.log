@@ -1,6 +1,0 @@
-Start:		1627883386.3443074
-Command:	grep admin_space_left_action /etc/audit/auditd.conf
-Output:
-admin_space_left_action = SUSPEND
-
-End:		1627883386.364339

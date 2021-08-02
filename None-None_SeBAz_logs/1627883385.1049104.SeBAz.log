@@ -1,6 +1,0 @@
-Start:		1627883385.105013
-Command:	grep "hard core" /etc/security/limits.conf /etc/security/limits.d/*
-Output:
-/etc/security/limits.d/core_dump.conf:* hard core 0
-
-End:		1627883385.1327953

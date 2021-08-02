@@ -1,9 +1,0 @@
-Start:		1627883385.9362633
-Command:	grep "net\.ipv4\.conf\.all\.secure_redirects" /etc/sysctl.conf /etc/sysctl.d/*
-Output:
-/etc/sysctl.conf:# net.ipv4.conf.all.secure_redirects = 1
-/etc/sysctl.conf:net.ipv4.conf.all.secure_redirects=0
-/etc/sysctl.d/99-sysctl.conf:# net.ipv4.conf.all.secure_redirects = 1
-/etc/sysctl.d/99-sysctl.conf:net.ipv4.conf.all.secure_redirects=0
-
-End:		1627883385.9528775

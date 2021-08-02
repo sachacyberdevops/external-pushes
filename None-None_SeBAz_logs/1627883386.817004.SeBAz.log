@@ -1,9 +1,0 @@
-Start:		1627883386.8171017
-Command:	find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' -exec stat {} \; | grep "Access: ("
-Output:
-Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-
-End:		1627883386.8655038

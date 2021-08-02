@@ -1,6 +1,0 @@
-Start:		1627883385.5139074
-Command:	systemctl is-enabled avahi-daemon
-Output:
-Failed to get unit file state for avahi-daemon.service: No such file or directory
-
-End:		1627883385.5493443

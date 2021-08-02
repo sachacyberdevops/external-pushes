@@ -1,8 +1,0 @@
-Start:		1627883386.5064642
-Command:	mount | grep -e "/dev/sd"
-Output:
-/dev/sdb1 on / type ext4 (rw,relatime,discard)
-/dev/sdb15 on /boot/efi type vfat (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
-/dev/sda1 on /mnt type ext4 (rw,relatime,x-systemd.requires=cloud-init.service)
-
-End:		1627883386.5215745

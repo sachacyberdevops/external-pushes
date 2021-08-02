@@ -1,5 +1,0 @@
-Start:		1627883384.7535672
-Command:	lsmod | grep freevxfs
-Output:
-
-End:		1627883384.797402

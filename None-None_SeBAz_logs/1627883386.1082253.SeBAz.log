@@ -1,7 +1,0 @@
-Start:		1627883386.1083803
-Command:	stat /etc/hosts.deny | grep Access
-Output:
-Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: 2021-08-02 15:11:09.018703300 +1000
-
-End:		1627883386.1376226

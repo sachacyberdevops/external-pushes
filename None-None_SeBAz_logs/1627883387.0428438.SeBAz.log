@@ -1,5 +1,0 @@
-Start:		1627883387.0429595
-Command:	cat /etc/pam.d/common-password | grep -E "password requisite pam_pwquality.so"
-Output:
-
-End:		1627883387.0598752

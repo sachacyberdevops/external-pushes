@@ -1,6 +1,0 @@
-Start:		1627883385.953068
-Command:	sysctl net.ipv4.conf.default.secure_redirects
-Output:
-net.ipv4.conf.default.secure_redirects = 0
-
-End:		1627883385.9693022

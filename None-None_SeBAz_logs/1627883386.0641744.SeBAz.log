@@ -1,6 +1,0 @@
-Start:		1627883386.064352
-Command:	sysctl net.ipv6.conf.all.accept_ra
-Output:
-net.ipv6.conf.all.accept_ra = 1
-
-End:		1627883386.080707

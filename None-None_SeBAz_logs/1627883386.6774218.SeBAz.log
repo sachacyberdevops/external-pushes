@@ -1,6 +1,0 @@
-Start:		1627883386.6775737
-Command:	grep -e Compress /etc/systemd/journald.conf
-Output:
-#Compress=yes
-
-End:		1627883386.6928945

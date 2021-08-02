@@ -1,6 +1,0 @@
-Start:		1627883384.811696
-Command:	mount | grep -E '\s/tmp\s'
-Output:
-/usr/tmpDSK on /tmp type tmpfs (rw,nosuid,relatime,loop)
-
-End:		1627883384.8360424

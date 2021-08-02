@@ -1,6 +1,0 @@
-Start:		1627883386.9295611
-Command:	sshd -T | grep clientaliveinterval
-Output:
-clientaliveinterval 600
-
-End:		1627883386.9589744

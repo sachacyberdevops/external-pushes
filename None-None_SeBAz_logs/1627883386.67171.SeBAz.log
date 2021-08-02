@@ -1,5 +1,0 @@
-Start:		1627883386.671859
-Command:	grep '$InputTCPServerRun' /etc/rsyslog.conf /etc/rsyslog.d/*.conf
-Output:
-
-End:		1627883386.687884

@@ -1,6 +1,0 @@
-Start:		1627883392.2562954
-Command:	sudo cat ./_MEI0KUxVP/scripts/ind/6_2_19.sh > ./duplicate_group_name.sh
-Output:
-/etc/host.conf: line 7: bad command `nospoof on'
-
-End:		1627883392.3026886

@@ -1,6 +1,0 @@
-Start:		1627883385.8259284
-Command:	systemctl is-enabled ypserv
-Output:
-Failed to get unit file state for ypserv.service: No such file or directory
-
-End:		1627883385.8560905

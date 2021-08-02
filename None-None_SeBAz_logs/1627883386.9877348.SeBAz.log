@@ -1,6 +1,0 @@
-Start:		1627883386.9878578
-Command:	sshd -T | grep -i allowtcpforwarding
-Output:
-allowtcpforwarding no
-
-End:		1627883387.0198271

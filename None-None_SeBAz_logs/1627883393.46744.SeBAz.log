@@ -1,5 +1,0 @@
-Start:		1627883393.46755
-Command:	find /dev/sdb15 -xdev -nouser
-Output:
-
-End:		1627883393.480958

@@ -1,6 +1,0 @@
-Start:		1627883392.0390685
-Command:	sudo cat ./_MEI0KUxVP/scripts/ind/6_2_16.sh > ./duplicate_uid.sh
-Output:
-/etc/host.conf: line 7: bad command `nospoof on'
-
-End:		1627883392.0802248

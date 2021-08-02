@@ -1,5 +1,0 @@
-Start:		1627883388.235707
-Command:	df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -nogroup
-Output:
-
-End:		1627883393.6812363

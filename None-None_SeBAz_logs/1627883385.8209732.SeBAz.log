@@ -1,6 +1,0 @@
-Start:		1627883385.8210797
-Command:	systemctl is-enabled rsyncd
-Output:
-Failed to get unit file state for rsyncd.service: No such file or directory
-
-End:		1627883385.851984

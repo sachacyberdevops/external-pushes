@@ -1,5 +1,0 @@
-Start:		1627883384.7763383
-Command:	lsmod | grep hfs
-Output:
-
-End:		1627883384.8172836

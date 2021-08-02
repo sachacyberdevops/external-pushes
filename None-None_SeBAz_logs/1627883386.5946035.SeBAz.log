@@ -1,5 +1,0 @@
-Start:		1627883386.5947244
-Command:	grep modules /etc/audit/rules.d/*.rules
-Output:
-
-End:		1627883386.6061275

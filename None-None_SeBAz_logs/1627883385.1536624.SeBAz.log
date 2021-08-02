@@ -1,7 +1,0 @@
-Start:		1627883385.1537912
-Command:	grep "fs\.suid_dumpable" /etc/sysctl.conf /etc/sysctl.d/*
-Output:
-/etc/sysctl.conf:fs.suid_dumpable=0
-/etc/sysctl.d/99-sysctl.conf:fs.suid_dumpable=0
-
-End:		1627883385.1821263

@@ -1,5 +1,0 @@
-Start:		1627883385.111009
-Command:	grep "^\s*password" /boot/grub/grub.cfg
-Output:
-
-End:		1627883385.1345823

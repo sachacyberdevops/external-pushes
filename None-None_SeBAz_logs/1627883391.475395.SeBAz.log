@@ -1,6 +1,0 @@
-Start:		1627883391.4755633
-Command:	sudo cat ./_MEI0KUxVP/scripts/ind/6_2_11.sh > ./user_forward_file.sh
-Output:
-/etc/host.conf: line 7: bad command `nospoof on'
-
-End:		1627883391.5187173

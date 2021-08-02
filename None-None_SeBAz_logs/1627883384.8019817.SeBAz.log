@@ -1,6 +1,0 @@
-Start:		1627883384.8021445
-Command:	grep -i vfat /etc/fstab
-Output:
-UUID=C4E4-E7F8	/boot/efi	vfat	umask=0077	0 1
-
-End:		1627883384.8224547

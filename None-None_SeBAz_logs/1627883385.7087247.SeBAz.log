@@ -1,6 +1,0 @@
-Start:		1627883385.708849
-Command:	systemctl is-enabled rpcbind
-Output:
-Failed to get unit file state for rpcbind.service: No such file or directory
-
-End:		1627883385.7326381

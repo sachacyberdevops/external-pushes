@@ -1,7 +1,0 @@
-Start:		1627883385.0591073
-Command:	stat /boot/grub*/grub.cfg | grep Access
-Output:
-Access: (0444/-r--r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: 2021-08-02 15:39:55.445747854 +1000
-
-End:		1627883385.0916789

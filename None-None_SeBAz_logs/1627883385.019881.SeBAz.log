@@ -1,5 +1,0 @@
-Start:		1627883385.0200357
-Command:	df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type d \( -perm -0002 -a ! -perm -1000 \) 2>/dev/null
-Output:
-
-End:		1627883386.5943346

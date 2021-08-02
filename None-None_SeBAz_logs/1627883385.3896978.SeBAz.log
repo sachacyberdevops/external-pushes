@@ -1,6 +1,0 @@
-Start:		1627883385.3898504
-Command:	grep -R "^talk" /etc/inetd.*
-Output:
-grep: /etc/inetd.*: No such file or directory
-
-End:		1627883385.413163

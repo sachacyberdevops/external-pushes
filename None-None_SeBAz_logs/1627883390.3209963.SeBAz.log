@@ -1,5 +1,0 @@
-Start:		1627883390.321111
-Command:	grep '^\+:' /etc/passwd
-Output:
-
-End:		1627883390.3368013

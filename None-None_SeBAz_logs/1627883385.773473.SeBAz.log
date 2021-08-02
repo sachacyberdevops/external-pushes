@@ -1,6 +1,0 @@
-Start:		1627883385.7737064
-Command:	systemctl is-enabled squid
-Output:
-Failed to get unit file state for squid.service: No such file or directory
-
-End:		1627883385.8003688

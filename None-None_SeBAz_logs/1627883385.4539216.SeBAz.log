@@ -1,6 +1,0 @@
-Start:		1627883385.4540336
-Command:	grep -R "^tftp" /etc/inetd.*
-Output:
-grep: /etc/inetd.*: No such file or directory
-
-End:		1627883385.4810793

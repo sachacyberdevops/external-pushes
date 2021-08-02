@@ -1,6 +1,0 @@
-Start:		1627883386.6167996
-Command:	systemctl is-enabled rsyslog
-Output:
-enabled
-
-End:		1627883386.6451442

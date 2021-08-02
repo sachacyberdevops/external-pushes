@@ -1,5 +1,0 @@
-Start:		1627883384.9725862
-Command:	mount | grep -E '\s/dev/shm\s' | grep -v nodev
-Output:
-
-End:		1627883385.0035484

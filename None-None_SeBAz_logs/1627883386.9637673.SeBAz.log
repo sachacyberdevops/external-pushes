@@ -1,6 +1,0 @@
-Start:		1627883386.9639323
-Command:	sshd -T | grep -i usepam
-Output:
-usepam yes
-
-End:		1627883386.985929

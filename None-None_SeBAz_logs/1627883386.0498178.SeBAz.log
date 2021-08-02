@@ -1,6 +1,0 @@
-Start:		1627883386.0499947
-Command:	sysctl net.ipv4.tcp_syncookies
-Output:
-net.ipv4.tcp_syncookies = 1
-
-End:		1627883386.0688345

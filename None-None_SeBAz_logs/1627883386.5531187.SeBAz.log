@@ -1,6 +1,0 @@
-Start:		1627883386.5532246
-Command:	grep delete /etc/audit/rules.d/*.rules
-Output:
-## First rule - delete all
-
-End:		1627883386.5656593

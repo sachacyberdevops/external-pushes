@@ -1,5 +1,0 @@
-Start:		1627883393.481149
-Command:	find /dev/sda1 -xdev -nouser
-Output:
-
-End:		1627883393.491641

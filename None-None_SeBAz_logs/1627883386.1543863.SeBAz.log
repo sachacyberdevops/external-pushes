@@ -1,5 +1,0 @@
-Start:		1627883386.1544833
-Command:	lsmod | grep rds
-Output:
-
-End:		1627883386.177853

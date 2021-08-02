@@ -1,6 +1,0 @@
-Start:		1627883392.1447291
-Command:	sudo cat ./_MEI0KUxVP/scripts/ind/6_2_17.sh > ./duplicate_gid.sh
-Output:
-/etc/host.conf: line 7: bad command `nospoof on'
-
-End:		1627883392.1896796

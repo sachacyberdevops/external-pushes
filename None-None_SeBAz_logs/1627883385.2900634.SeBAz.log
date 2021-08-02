@@ -1,7 +1,0 @@
-Start:		1627883385.2902222
-Command:	stat /etc/issue | grep Access
-Output:
-Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: 2021-08-02 15:11:03.590703300 +1000
-
-End:		1627883385.3214178

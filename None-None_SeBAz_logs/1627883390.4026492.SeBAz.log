@@ -1,5 +1,0 @@
-Start:		1627883390.402771
-Command:	grep '^\+:' /etc/group
-Output:
-
-End:		1627883390.4167218

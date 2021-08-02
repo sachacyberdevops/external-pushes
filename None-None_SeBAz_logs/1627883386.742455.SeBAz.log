@@ -1,6 +1,0 @@
-Start:		1627883386.742595
-Command:	stat /etc/cron.deny
-Output:
-stat: cannot stat '/etc/cron.deny': No such file or directory
-
-End:		1627883386.7547023

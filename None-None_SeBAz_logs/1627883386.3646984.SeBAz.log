@@ -1,8 +1,0 @@
-Start:		1627883386.3648112
-Command:	grep "^\s*linux" /boot/grub*/grub.cfg
-Output:
-        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
-	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
-	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro recovery nomodeset dis_ucode_ldr console=tty1 console=ttyS0 earlyprintk=ttyS0
-
-End:		1627883386.377444

@@ -1,6 +1,0 @@
-Start:		1627883385.8316681
-Command:	sysctl net.ipv4.ip_forward
-Output:
-net.ipv4.ip_forward = 0
-
-End:		1627883385.8487194

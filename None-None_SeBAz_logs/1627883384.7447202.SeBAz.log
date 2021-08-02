@@ -1,6 +1,0 @@
-Start:		1627883384.74521
-Command:	modprobe -n -v jffs2
-Output:
-install /bin/true 
-
-End:		1627883384.7732632

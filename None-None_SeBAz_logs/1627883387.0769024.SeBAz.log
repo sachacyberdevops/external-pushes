@@ -1,6 +1,0 @@
-Start:		1627883387.0770555
-Command:	cat /etc/pam.d/password-auth
-Output:
-cat: /etc/pam.d/password-auth: No such file or directory
-
-End:		1627883387.0921016

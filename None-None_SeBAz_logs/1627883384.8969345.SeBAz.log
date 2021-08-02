@@ -1,5 +1,0 @@
-Start:		1627883384.897097
-Command:	mount | grep /var/tmp
-Output:
-
-End:		1627883384.945865

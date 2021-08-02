@@ -1,9 +1,0 @@
-Start:		1627883386.0080757
-Command:	grep "net\.ipv4\.conf\.all\.log_martians" /etc/sysctl.conf /etc/sysctl.d/*
-Output:
-/etc/sysctl.conf:#net.ipv4.conf.all.log_martians = 1
-/etc/sysctl.conf:net.ipv4.conf.all.log_martians=1
-/etc/sysctl.d/99-sysctl.conf:#net.ipv4.conf.all.log_martians = 1
-/etc/sysctl.d/99-sysctl.conf:net.ipv4.conf.all.log_martians=1
-
-End:		1627883386.0247617

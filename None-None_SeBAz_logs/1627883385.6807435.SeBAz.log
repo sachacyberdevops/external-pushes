@@ -1,6 +1,0 @@
-Start:		1627883385.6808922
-Command:	systemctl is-enabled named
-Output:
-Failed to get unit file state for named.service: No such file or directory
-
-End:		1627883385.7111921

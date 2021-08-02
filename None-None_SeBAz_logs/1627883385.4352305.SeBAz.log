@@ -1,6 +1,0 @@
-Start:		1627883385.4353955
-Command:	grep -R "^exec" /etc/inetd.*
-Output:
-grep: /etc/inetd.*: No such file or directory
-
-End:		1627883385.453629

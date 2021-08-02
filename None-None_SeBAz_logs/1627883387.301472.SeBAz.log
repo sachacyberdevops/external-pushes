@@ -1,7 +1,0 @@
-Start:		1627883387.3016124
-Command:	stat /etc/group- | grep Access
-Output:
-Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: 2021-08-02 15:15:02.000000000 +1000
-
-End:		1627883387.3245156

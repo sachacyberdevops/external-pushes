@@ -1,6 +1,0 @@
-Start:		1627883385.8568134
-Command:	sysctl net.ipv4.conf.all.accept_source_route
-Output:
-net.ipv4.conf.all.accept_source_route = 0
-
-End:		1627883385.8701239
