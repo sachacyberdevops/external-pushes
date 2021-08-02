@@ -1,0 +1,5 @@
+Start:		1627883390.3006742
+Command:	awk -F: '($2 == "" ) { print $1 " does not have a password "}' /etc/shadow
+Output:
+
+End:		1627883390.3207042

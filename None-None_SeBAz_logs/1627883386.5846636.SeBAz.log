@@ -1,0 +1,5 @@
+Start:		1627883386.5847604
+Command:	grep actions /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627883386.5977914

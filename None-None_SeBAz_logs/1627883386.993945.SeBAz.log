@@ -1,0 +1,5 @@
+Start:		1627883386.994108
+Command:	sshd -T | grep denyusers
+Output:
+
+End:		1627883387.0222037

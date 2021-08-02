@@ -1,0 +1,5 @@
+Start:		1627883393.688361
+Command:	find /dev/sdb1 -xdev -nogroup
+Output:
+
+End:		1627883393.6930053

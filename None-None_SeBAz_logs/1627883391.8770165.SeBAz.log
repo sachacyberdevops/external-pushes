@@ -1,0 +1,6 @@
+Start:		1627883391.8771095
+Command:	sudo cat ./_MEI0KUxVP/scripts/ind/6_2_15.sh > ./group_passwd.sh
+Output:
+/etc/host.conf: line 7: bad command `nospoof on'
+
+End:		1627883391.9138737

@@ -1,0 +1,5 @@
+Start:		1627883386.4586773
+Command:	auditctl -l | grep logins
+Output:
+
+End:		1627883386.4748042

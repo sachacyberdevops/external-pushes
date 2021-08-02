@@ -1,0 +1,6 @@
+Start:		1627883387.1253936
+Command:	grep -E ^[^:]+:[^\!*] /etc/shadow | cut -d: -f1,6
+Output:
+adminuser:7
+
+End:		1627883387.1450973

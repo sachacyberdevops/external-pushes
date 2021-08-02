@@ -1,0 +1,5 @@
+Start:		1627883386.5877323
+Command:	auditctl -l | grep scope
+Output:
+
+End:		1627883386.607804

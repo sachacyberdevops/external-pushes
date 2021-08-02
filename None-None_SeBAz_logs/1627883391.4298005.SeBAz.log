@@ -1,0 +1,6 @@
+Start:		1627883391.4299047
+Command:	sudo cat ./_MEI0KUxVP/scripts/ind/6_2_10.sh > ./user_dot_file.sh
+Output:
+/etc/host.conf: line 7: bad command `nospoof on'
+
+End:		1627883391.4730542

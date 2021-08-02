@@ -1,0 +1,7 @@
+Start:		1627883385.1828039
+Command:	grep "^\s*kernel" /boot/grub/menu.lst
+Output:
+kernel		/boot/vmlinuz-4.15.0-151-generic root=LABEL=cloudimg-rootfs ro console=hvc0 
+kernel		/boot/vmlinuz-4.15.0-151-generic root=LABEL=cloudimg-rootfs ro  single
+
+End:		1627883385.2092416

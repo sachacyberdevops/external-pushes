@@ -1,0 +1,6 @@
+Start:		1627883385.047067
+Command:	crontab -u root -l | grep aide
+Output:
+no crontab for root
+
+End:		1627883385.081392

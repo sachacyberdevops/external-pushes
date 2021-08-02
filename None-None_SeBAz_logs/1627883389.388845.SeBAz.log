@@ -1,0 +1,5 @@
+Start:		1627883389.388955
+Command:	find /dev/sda1 -xdev -type f -perm -0002
+Output:
+
+End:		1627883389.4088743

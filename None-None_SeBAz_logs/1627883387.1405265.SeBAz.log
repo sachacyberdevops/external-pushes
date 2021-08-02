@@ -1,0 +1,5 @@
+Start:		1627883387.1406393
+Command:	for usr in $(cut -d: -f1 /etc/shadow); do [[ $(chage --list $usr | grep '^Last password change' | cut -d: -f2) > $(date) ]] && echo "$usr :$(chage --list $usr | grep '^Last password change' | cut -d: -f2)"; done
+Output:
+
+End:		1627883388.2336924

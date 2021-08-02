@@ -1,0 +1,5 @@
+Start:		1627883386.9615724
+Command:	sshd -T | grep allowgroups
+Output:
+
+End:		1627883386.9938552

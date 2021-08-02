@@ -1,0 +1,13 @@
+Start:		1627883386.7530985
+Command:	stat /etc/ssh/sshd_config
+Output:
+  File: /etc/ssh/sshd_config
+  Size: 3435      	Blocks: 8          IO Block: 4096   regular file
+Device: 811h/2065d	Inode: 273559      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-02 15:15:29.664906871 +1000
+Modify: 2021-08-02 15:14:11.488632143 +1000
+Change: 2021-08-02 15:14:11.488632143 +1000
+ Birth: -
+
+End:		1627883386.7726839

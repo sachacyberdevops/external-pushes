@@ -1,0 +1,7 @@
+Start:		1627883387.2818625
+Command:	stat /etc/shadow- | grep Access
+Output:
+Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (   42/  shadow)
+Access: 2021-08-02 15:22:09.000000000 +1000
+
+End:		1627883387.3095613

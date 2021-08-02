@@ -1,0 +1,5 @@
+Start:		1627883384.7745793
+Command:	lsmod | grep hfsplus
+Output:
+
+End:		1627883384.8016272

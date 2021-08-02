@@ -1,0 +1,26 @@
+Start:		1627883386.6885376
+Command:	find /var/log -type f -ls
+Output:
+    85991      4 -rw-r--r--   1 root     root         1545 Aug  2 15:15 /var/log/alternatives.log
+    85860    280 -rw-r-----   1 syslog   adm        285138 Aug  2 15:49 /var/log/syslog
+    63368    108 -rw-r--r--   1 root     root       103481 Aug  2 15:24 /var/log/dpkg.log
+    85864     24 -rw-r--r--   1 root     root        24433 Aug  2 15:37 /var/log/waagent.log
+    63357      8 -rw-rw-r--   1 root     utmp         6144 Aug  2 15:23 /var/log/wtmp
+    85863      4 -rw-r--r--   1 root     root          112 Aug  2 15:16 /var/log/unattended-upgrades/unattended-upgrades-shutdown.log
+   274022    120 -rw-r-----   1 root     adm        117900 Aug  2 15:49 /var/log/audit/audit.log
+    86036   8192 -rw-r-----   1 root     systemd-journal  8388608 Aug  2 15:16 /var/log/journal/a68d3457c36440ec83d82e1f2ee7111f/user-1000.journal
+    10253   8196 -rw-r-----   1 root     systemd-journal  8388608 Aug  2 15:49 /var/log/journal/a68d3457c36440ec83d82e1f2ee7111f/system.journal
+    10684   8192 -rw-r-----   1 root     systemd-journal  8388608 Aug  2 15:48 /var/log/journal/a68d3457c36440ec83d82e1f2ee7111f/user-1001.journal
+    86037      0 -rw-r--r--   1 root     root                   0 Aug  2 15:11 /var/log/landscape/sysinfo.log
+    63359      8 -rw-rw-r--   1 root     utmp              292584 Aug  2 15:23 /var/log/lastlog
+    10271    276 -rw-r--r--   1 syslog   adm               280009 Aug  2 15:22 /var/log/cloud-init.log
+    85862    136 -rw-r-----   1 syslog   adm               132387 Aug  2 15:49 /var/log/auth.log
+    85861    112 -rw-r-----   1 syslog   adm               112048 Aug  2 15:22 /var/log/kern.log
+      221     24 -rw-r--r--   1 root     root               24088 Aug  2 15:15 /var/log/apt/eipp.log.xz
+    63362     12 -rw-r--r--   1 root     root                9951 Aug  2 15:15 /var/log/apt/history.log
+    63361     32 -rw-r-----   1 root     adm                25171 Aug  2 15:15 /var/log/apt/term.log
+      310      8 -rw-------   1 root     root               64128 Aug  2 15:22 /var/log/tallylog
+    10270     12 -rw-r-----   1 root     adm                 9837 Aug  2 15:22 /var/log/cloud-init-output.log
+    63358     60 -rw-rw----   1 root     utmp               53376 Aug  2 15:49 /var/log/btmp
+
+End:		1627883386.7098143

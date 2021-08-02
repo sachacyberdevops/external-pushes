@@ -1,0 +1,6 @@
+Start:		1627883392.1572366
+Command:	sudo cat ./_MEI0KUxVP/scripts/ind/6_2_18.sh > ./duplicate_user_name.sh
+Output:
+/etc/host.conf: line 7: bad command `nospoof on'
+
+End:		1627883392.204789

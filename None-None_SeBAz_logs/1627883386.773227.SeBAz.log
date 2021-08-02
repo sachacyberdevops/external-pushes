@@ -1,0 +1,5 @@
+Start:		1627883386.7733755
+Command:	grep ^Protocol /etc/ssh/sshd_config
+Output:
+
+End:		1627883386.7870457

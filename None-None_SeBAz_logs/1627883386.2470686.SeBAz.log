@@ -1,0 +1,8 @@
+Start:		1627883386.247224
+Command:	iptables -w -L | grep Chain
+Output:
+Chain INPUT (policy ACCEPT)
+Chain FORWARD (policy ACCEPT)
+Chain OUTPUT (policy ACCEPT)
+
+End:		1627883386.2634668

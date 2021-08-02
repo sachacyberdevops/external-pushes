@@ -1,0 +1,9 @@
+Start:		1627883385.945484
+Command:	grep "net\.ipv6\.conf\.all\.accept_source_route" /etc/sysctl.conf /etc/sysctl.d/*
+Output:
+/etc/sysctl.conf:#net.ipv6.conf.all.accept_source_route = 0
+/etc/sysctl.conf:net.ipv6.conf.all.accept_source_route=0
+/etc/sysctl.d/99-sysctl.conf:#net.ipv6.conf.all.accept_source_route = 0
+/etc/sysctl.d/99-sysctl.conf:net.ipv6.conf.all.accept_source_route=0
+
+End:		1627883385.9611418

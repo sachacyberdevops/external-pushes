@@ -1,0 +1,5 @@
+Start:		1627883386.5182412
+Command:	grep mounts /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627883386.5329664

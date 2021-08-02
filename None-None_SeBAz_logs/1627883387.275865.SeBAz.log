@@ -1,0 +1,7 @@
+Start:		1627883387.2759805
+Command:	stat /etc/passwd- | grep Access
+Output:
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-02 15:15:02.000000000 +1000
+
+End:		1627883387.3010154

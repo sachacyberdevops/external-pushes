@@ -1,0 +1,5 @@
+Start:		1627883390.3372529
+Command:	grep '^\+:' /etc/shadow
+Output:
+
+End:		1627883390.4008176

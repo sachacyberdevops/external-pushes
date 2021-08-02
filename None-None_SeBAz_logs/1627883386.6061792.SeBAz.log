@@ -1,0 +1,5 @@
+Start:		1627883386.6062715
+Command:	auditctl -l | grep modules
+Output:
+
+End:		1627883386.6254084

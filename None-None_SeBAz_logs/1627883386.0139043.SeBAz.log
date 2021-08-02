@@ -1,0 +1,6 @@
+Start:		1627883386.0140343
+Command:	sysctl net.ipv6.conf.default.accept_redirects
+Output:
+net.ipv6.conf.default.accept_redirects = 0
+
+End:		1627883386.0294726

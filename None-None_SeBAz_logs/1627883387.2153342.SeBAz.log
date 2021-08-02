@@ -1,0 +1,8 @@
+Start:		1627883387.215441
+Command:	grep pam_wheel.so /etc/pam.d/su
+Output:
+# auth       required   pam_wheel.so
+# auth       sufficient pam_wheel.so trust
+# auth       required   pam_wheel.so deny group=nosu
+
+End:		1627883387.2241955

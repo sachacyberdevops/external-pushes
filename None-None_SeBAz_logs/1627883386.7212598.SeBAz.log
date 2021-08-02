@@ -1,0 +1,13 @@
+Start:		1627883386.7213736
+Command:	stat /etc/cron.hourly
+Output:
+  File: /etc/cron.hourly
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 811h/2065d	Inode: 1338        Links: 2
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-02 15:39:55.617748316 +1000
+Modify: 2021-08-02 15:14:47.308703705 +1000
+Change: 2021-08-02 15:14:47.308703705 +1000
+ Birth: -
+
+End:		1627883386.7368524

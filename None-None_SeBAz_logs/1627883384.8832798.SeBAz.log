@@ -1,0 +1,6 @@
+Start:		1627883384.8833842
+Command:	mount | grep -E '\s/tmp\s' | grep -v noexec
+Output:
+/usr/tmpDSK on /tmp type tmpfs (rw,nosuid,relatime,loop)
+
+End:		1627883384.9243362

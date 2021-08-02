@@ -1,0 +1,6 @@
+Start:		1627883385.4815412
+Command:	grep "^restrict" /etc/ntp.conf | grep default
+Output:
+grep: /etc/ntp.conf: No such file or directory
+
+End:		1627883385.507169

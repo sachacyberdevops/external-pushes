@@ -1,0 +1,5 @@
+Start:		1627883385.063709
+Command:	lsmod | grep usb-storage
+Output:
+
+End:		1627883385.104661

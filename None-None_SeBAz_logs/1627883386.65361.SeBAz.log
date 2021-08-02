@@ -1,0 +1,28 @@
+Start:		1627883386.6537244
+Command:	ls -l /var/log/
+Output:
+total 1076
+-rw-r--r--  1 root      root              1545 Aug  2 15:15 alternatives.log
+drwxr-xr-x  2 root      root              4096 Sep 28  2018 apparmor
+drwxr-xr-x  2 root      root              4096 Aug  2 15:15 apt
+drwxr-x---  2 root      adm               4096 Aug  2 15:15 audit
+-rw-r-----  1 syslog    adm             132387 Aug  2 15:49 auth.log
+drwxr-xr-x  2 root      root              4096 Aug  2 15:10 azure
+-rw-rw----  1 root      utmp             53376 Aug  2 15:49 btmp
+-rw-r-----  1 root      adm               9837 Aug  2 15:22 cloud-init-output.log
+-rw-r--r--  1 syslog    adm             280009 Aug  2 15:22 cloud-init.log
+drwxr-xr-x  2 root      root              4096 Apr 21 07:36 dist-upgrade
+-rw-r--r--  1 root      root            103481 Aug  2 15:24 dpkg.log
+drwxr-sr-x+ 3 root      systemd-journal   4096 Aug  2 15:10 journal
+-rw-r-----  1 syslog    adm             112048 Aug  2 15:22 kern.log
+drwxr-xr-x  2 landscape landscape         4096 Aug  2 15:11 landscape
+-rw-rw-r--  1 root      utmp            292584 Aug  2 15:23 lastlog
+drwxr-xr-x  2 root      root              4096 Nov 24  2018 lxd
+drwxr-x---  2 root      adm               4096 Apr 14 22:52 samba
+-rw-r-----  1 syslog    adm             285138 Aug  2 15:49 syslog
+-rw-------  1 root      root             64128 Aug  2 15:22 tallylog
+drwxr-x---  2 root      adm               4096 Aug  2 15:10 unattended-upgrades
+-rw-r--r--  1 root      root             24433 Aug  2 15:37 waagent.log
+-rw-rw-r--  1 root      utmp              6144 Aug  2 15:23 wtmp
+
+End:		1627883386.6769335

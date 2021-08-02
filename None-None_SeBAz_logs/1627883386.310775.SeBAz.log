@@ -1,0 +1,7 @@
+Start:		1627883386.3108785
+Command:	grep max_log_file /etc/audit/auditd.conf
+Output:
+max_log_file = 8
+max_log_file_action = ROTATE
+
+End:		1627883386.3267787

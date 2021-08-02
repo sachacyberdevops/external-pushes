@@ -1,0 +1,5 @@
+Start:		1627883385.0858228
+Command:	grep ^root:[*\!]: /etc/shadow
+Output:
+
+End:		1627883385.1086452

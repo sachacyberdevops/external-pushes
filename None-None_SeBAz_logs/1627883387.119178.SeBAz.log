@@ -1,0 +1,6 @@
+Start:		1627883387.1193004
+Command:	useradd -D | grep INACTIVE
+Output:
+INACTIVE=-1
+
+End:		1627883387.142606

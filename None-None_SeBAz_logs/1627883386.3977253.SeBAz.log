@@ -1,0 +1,5 @@
+Start:		1627883386.3978174
+Command:	auditctl -l | grep identity
+Output:
+
+End:		1627883386.4195461

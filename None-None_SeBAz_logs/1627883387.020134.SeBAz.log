@@ -1,0 +1,6 @@
+Start:		1627883387.0202508
+Command:	sshd -T | grep -i maxsessions
+Output:
+maxsessions 10
+
+End:		1627883387.0507333

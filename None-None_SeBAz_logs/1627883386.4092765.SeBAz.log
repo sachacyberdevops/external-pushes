@@ -1,0 +1,5 @@
+Start:		1627883386.4093928
+Command:	grep system-locale /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627883386.4250288

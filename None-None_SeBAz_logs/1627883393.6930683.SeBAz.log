@@ -1,0 +1,5 @@
+Start:		1627883393.6931589
+Command:	find /dev/sdb15 -xdev -nogroup
+Output:
+
+End:		1627883393.697301

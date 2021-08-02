@@ -1,0 +1,5 @@
+Start:		1627883386.4452763
+Command:	grep logins /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627883386.4585364
