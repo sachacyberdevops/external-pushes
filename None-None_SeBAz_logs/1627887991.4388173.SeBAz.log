@@ -1,0 +1,9 @@
+Start:		1627887991.4389164
+Command:	grep "net\.ipv6\.conf\.all\.accept_redirects" /etc/sysctl.conf /etc/sysctl.d/*
+Output:
+/etc/sysctl.conf:#net.ipv6.conf.all.accept_redirects = 0
+/etc/sysctl.conf:net.ipv6.conf.all.accept_redirects=0
+/etc/sysctl.d/99-sysctl.conf:#net.ipv6.conf.all.accept_redirects = 0
+/etc/sysctl.d/99-sysctl.conf:net.ipv6.conf.all.accept_redirects=0
+
+End:		1627887991.458088

@@ -1,0 +1,5 @@
+Start:		1627887990.7670045
+Command:	grep -R "^echo"/etc/inetd.*
+Output:
+
+End:		1627887990.995163

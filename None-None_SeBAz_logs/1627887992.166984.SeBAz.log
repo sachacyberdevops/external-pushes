@@ -1,0 +1,35 @@
+Start:		1627887992.1670966
+Command:	find /var/log -type f -ls
+Output:
+   272661      4 -rw-r--r--   1 root     root         1828 Aug  2 06:55 /var/log/azure/Microsoft.OSTCExtensions.VMAccessForLinux/extension.log
+    85991      4 -rw-r-----   1 root     root         1088 Jul 30 06:09 /var/log/alternatives.log
+    85863    420 -rw-r-----   1 syslog   adm        428760 Aug  2 07:06 /var/log/syslog
+    63368    112 -rw-r-----   1 root     root       107796 Jul 30 06:10 /var/log/dpkg.log
+    85860     32 -rw-r-----   1 root     root        29677 Aug  2 07:01 /var/log/waagent.log
+    63357      8 -rw-rw-r--   1 root     utmp         6144 Aug  2 06:56 /var/log/wtmp
+    85974      4 -rw-r-----   1 root     root          112 Jul 30 06:11 /var/log/unattended-upgrades/unattended-upgrades-shutdown.log
+   258075   6732 -rw-r-----   1 root     adm       6885694 Aug  2 07:06 /var/log/audit/audit.log
+   270472  10248 -r--r-----   1 root     adm      10485839 Jul 30 06:10 /var/log/audit/audit.log.1
+     1731      4 -rw-------   1 root     root         1328 Aug  2 06:56 /var/log/ubuntu-advantage.log
+    85985   8192 -rw-r-----   1 root     systemd-journal  8388608 Jul 30 06:11 /var/log/journal/f04b4779d5e64db0bc6e49a92978e646/user-1000.journal
+      755  49156 -rw-r-----   1 root     systemd-journal 50331648 Aug  2 07:06 /var/log/journal/f04b4779d5e64db0bc6e49a92978e646/system.journal
+     1655   8192 -rw-r-----   1 root     systemd-journal  8388608 Aug  2 07:02 /var/log/journal/f04b4779d5e64db0bc6e49a92978e646/user-1001.journal
+    10253  32772 -rw-r-----   1 root     systemd-journal 33554432 Jul 30 06:10 /var/log/journal/f04b4779d5e64db0bc6e49a92978e646/system@911d25f6ee9d495995d64702d9406507-0000000000000001-0005c850eb18ad44.journal
+    86399      4 -rw-r-----   1 syslog   adm                  143 Aug  2 06:46 /var/log/mail.log
+    86004      0 -rw-r-----   1 root     root                   0 Jul 30 06:00 /var/log/landscape/sysinfo.log
+      399     12 -rw-------   1 root     root                8917 Aug  2 07:06 /var/log/sudo.log
+    63359     12 -rw-rw-r--   1 root     utmp              292584 Aug  2 06:56 /var/log/lastlog
+    10271    304 -rw-r-----   1 syslog   adm               304757 Aug  2 06:46 /var/log/cloud-init.log
+    85862     44 -rw-r-----   1 syslog   adm                37874 Aug  2 07:06 /var/log/auth.log
+    85864    116 -rw-r-----   1 syslog   adm               118265 Aug  2 06:47 /var/log/kern.log
+       93     24 -rw-r--r--   1 root     root               23272 Jul 30 06:10 /var/log/apt/eipp.log.xz
+    63362     12 -rw-r--r--   1 root     root               10679 Jul 30 06:10 /var/log/apt/history.log
+    63361     44 -rw-r-----   1 root     adm                40480 Jul 30 06:10 /var/log/apt/term.log
+      310      8 -rw-------   1 root     root               64128 Aug  2 06:55 /var/log/tallylog
+    10270     12 -rw-r-----   1 root     adm                10345 Aug  2 06:46 /var/log/cloud-init-output.log
+    63358      8 -rw-rw----   1 root     utmp                4224 Aug  2 06:54 /var/log/btmp
+   272584      4 -rw-r--r--   1 _chrony  _chrony              924 Aug  2 07:04 /var/log/chrony/tracking.log
+   272587      4 -rw-r--r--   1 _chrony  _chrony             3151 Aug  2 07:04 /var/log/chrony/measurements.log
+   272586      4 -rw-r--r--   1 _chrony  _chrony             1755 Aug  2 07:04 /var/log/chrony/statistics.log
+
+End:		1627887992.191762

@@ -1,0 +1,10 @@
+Start:		1627887992.067177
+Command:	grep modules /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_16.rules:-w /sbin/insmod -p x -k modules
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_16.rules:-w /sbin/rmmod -p x -k modules
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_16.rules:-w /sbin/modprobe -p x -k modules
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_16.rules:-a always,exit -F arch=b64 -S init_module -S delete_module -k modules
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_16.rules:-a always,exit -F arch=b32 -S init_module -S delete_module -k modules
+
+End:		1627887992.0808718

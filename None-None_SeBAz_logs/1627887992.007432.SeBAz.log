@@ -1,0 +1,10 @@
+Start:		1627887992.0075545
+Command:	grep delete /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/audit.rules:## First rule - delete all
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_13.rules:-a always,exit -F arch=b32 -S unlink -S unlinkat -S rename -S renameat -F auid>=1000 -F auid!=4294967295 -k delete
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_13.rules:-a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -F auid>=1000 -F auid!=4294967295 -k delete
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_16.rules:-a always,exit -F arch=b64 -S init_module -S delete_module -k modules
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_16.rules:-a always,exit -F arch=b32 -S init_module -S delete_module -k modules
+
+End:		1627887992.024512

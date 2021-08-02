@@ -1,0 +1,10 @@
+Start:		1627887991.9442995
+Command:	auditctl -l | grep logins
+Output:
+-w /var/log/faillog -p wa -k logins
+-w /var/log/lastlog -p wa -k logins
+-w /var/log/tallylog -p wa -k logins
+-w /var/log/wtmp -p wa -k logins
+-w /var/log/btmp -p wa -k logins
+
+End:		1627887991.9668562

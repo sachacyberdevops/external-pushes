@@ -1,0 +1,7 @@
+Start:		1627887991.7790444
+Command:	grep space_left_action /etc/audit/auditd.conf
+Output:
+space_left_action = email
+admin_space_left_action = halt
+
+End:		1627887991.7960978

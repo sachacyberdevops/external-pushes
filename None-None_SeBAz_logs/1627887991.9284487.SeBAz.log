@@ -1,0 +1,10 @@
+Start:		1627887991.9285362
+Command:	grep logins /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_7.rules:-w /var/log/faillog -p wa -k logins
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_7.rules:-w /var/log/lastlog -p wa -k logins
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_7.rules:-w /var/log/tallylog -p wa -k logins
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_8.rules:-w /var/log/wtmp -p wa -k logins
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_8.rules:-w /var/log/btmp -p wa -k logins
+
+End:		1627887991.9441464

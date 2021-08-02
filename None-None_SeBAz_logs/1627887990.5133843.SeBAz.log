@@ -1,0 +1,7 @@
+Start:		1627887990.5135148
+Command:	journalctl | grep 'protection: active'
+Output:
+Jul 30 05:59:10 ubuntu kernel: NX (Execute Disable) protection: active
+Aug 02 06:46:34 pkrvmaz2t4o6q0i kernel: NX (Execute Disable) protection: active
+
+End:		1627887994.3457463

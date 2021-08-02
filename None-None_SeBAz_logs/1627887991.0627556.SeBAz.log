@@ -1,0 +1,6 @@
+Start:		1627887991.0628517
+Command:	systemctl is-enabled slapd
+Output:
+Failed to get unit file state for slapd.service: No such file or directory
+
+End:		1627887991.1156385

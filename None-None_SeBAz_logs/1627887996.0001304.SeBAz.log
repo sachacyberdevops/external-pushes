@@ -1,0 +1,7 @@
+Start:		1627887996.0002298
+Command:	./home_directory_permissions.sh
+Output:
+Other Read permission set on the home directory (/home/azureuser) of user azureuser
+Other Execute permission set on the home directory (/home/azureuser) of user azureuser
+
+End:		1627887996.2828379

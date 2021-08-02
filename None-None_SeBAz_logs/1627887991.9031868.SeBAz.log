@@ -1,0 +1,7 @@
+Start:		1627887991.9033296
+Command:	auditctl -l | grep MAC-policy
+Output:
+-w /etc/apparmor -p wa -k MAC-policy
+-w /etc/apparmor.d -p wa -k MAC-policy
+
+End:		1627887991.9282708

@@ -1,0 +1,5 @@
+Start:		1627887991.247888
+Command:	ss -lntu | grep -E ':25\s' | grep -E -v '\s(127.0.0.1|::1):25\s'
+Output:
+
+End:		1627887991.2730827

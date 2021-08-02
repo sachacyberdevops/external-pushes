@@ -1,0 +1,7 @@
+Start:		1627887992.0697265
+Command:	auditctl -l | grep scope
+Output:
+-w /etc/sudoers -p wa -k scope
+-w /etc/sudoers.d -p wa -k scope
+
+End:		1627887992.0921416

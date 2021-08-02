@@ -1,0 +1,10 @@
+Start:		1627887991.863544
+Command:	auditctl -l | grep time-change
+Output:
+-a always,exit -F arch=b32 -S stime,settimeofday,adjtimex -F key=time-change
+-a always,exit -F arch=b32 -S clock_settime -F key=time-change
+-a always,exit -F arch=b64 -S adjtimex,settimeofday -F key=time-change
+-a always,exit -F arch=b64 -S clock_settime -F key=time-change
+-w /etc/localtime -p wa -k time-change
+
+End:		1627887991.888522

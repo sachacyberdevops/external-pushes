@@ -1,0 +1,33 @@
+Start:		1627887992.129129
+Command:	ls -l /var/log/
+Output:
+total 1148
+drwxr-xr-x  2 root      root              4096 Feb  2  2018 aide
+-rw-r-----  1 root      root              1088 Jul 30 06:09 alternatives.log
+drwxr-xr-x  2 root      root              4096 Sep 27  2018 apparmor
+drwxr-xr-x  2 root      root              4096 Jul 30 06:10 apt
+drwxr-x---  2 root      adm               4096 Jul 30 06:10 audit
+-rw-r-----  1 syslog    adm              37874 Aug  2 07:06 auth.log
+drwxr-xr-x  3 root      root              4096 Aug  2 06:55 azure
+-rw-rw----  1 root      utmp              4224 Aug  2 06:54 btmp
+drwxr-xr-x  2 _chrony   _chrony           4096 Aug  2 06:55 chrony
+-rw-r-----  1 root      adm              10345 Aug  2 06:46 cloud-init-output.log
+-rw-r-----  1 syslog    adm             304757 Aug  2 06:46 cloud-init.log
+drwxr-xr-x  2 root      root              4096 Apr 20 21:36 dist-upgrade
+-rw-r-----  1 root      root            107796 Jul 30 06:10 dpkg.log
+drwxr-sr-x+ 3 root      systemd-journal   4096 Jul 30 05:59 journal
+-rw-r-----  1 syslog    adm             118265 Aug  2 06:47 kern.log
+drwxr-xr-x  2 landscape landscape         4096 Jul 30 06:00 landscape
+-rw-rw-r--  1 root      utmp            292584 Aug  2 06:56 lastlog
+drwxr-xr-x  2 root      root              4096 Nov 23  2018 lxd
+-rw-r-----  1 syslog    adm                143 Aug  2 06:46 mail.log
+drwxr-x---  2 root      adm               4096 Apr 14 12:52 samba
+-rw-------  1 root      root              8917 Aug  2 07:06 sudo.log
+-rw-r-----  1 syslog    adm             428760 Aug  2 07:06 syslog
+-rw-------  1 root      root             64128 Aug  2 06:55 tallylog
+-rw-------  1 root      root              1328 Aug  2 06:56 ubuntu-advantage.log
+drwxr-x---  2 root      adm               4096 Jul 30 06:00 unattended-upgrades
+-rw-r-----  1 root      root             29677 Aug  2 07:01 waagent.log
+-rw-rw-r--  1 root      utmp              6144 Aug  2 06:56 wtmp
+
+End:		1627887992.149737

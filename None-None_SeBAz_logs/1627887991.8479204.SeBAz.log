@@ -1,0 +1,10 @@
+Start:		1627887991.8480587
+Command:	grep identity /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_4.rules:-w /etc/group -p wa -k identity
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_4.rules:-w /etc/passwd -p wa -k identity
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_4.rules:-w /etc/gshadow -p wa -k identity
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_4.rules:-w /etc/shadow -p wa -k identity
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_4.rules:-w /etc/security/opasswd -p wa -k identity
+
+End:		1627887991.862029

@@ -1,0 +1,7 @@
+Start:		1627887992.7042878
+Command:	grep PASS_WARN_AGE /etc/login.defs
+Output:
+#	PASS_WARN_AGE	Number of days warning given before a password expires.
+PASS_WARN_AGE 7
+
+End:		1627887992.7224286

@@ -1,0 +1,7 @@
+Start:		1627887991.5324914
+Command:	grep "net\.ipv6\.conf\.all\.accept_ra" /etc/sysctl.conf /etc/sysctl.d/*
+Output:
+/etc/sysctl.conf:net.ipv6.conf.all.accept_ra=0
+/etc/sysctl.d/99-sysctl.conf:net.ipv6.conf.all.accept_ra=0
+
+End:		1627887991.5525987

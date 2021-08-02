@@ -1,0 +1,10 @@
+Start:		1627887991.531146
+Command:	grep "net\.ipv4\.tcp_syncookies" /etc/sysctl.conf /etc/sysctl.d/*
+Output:
+/etc/sysctl.conf:#net.ipv4.tcp_syncookies=1
+/etc/sysctl.conf:net.ipv4.tcp_syncookies=1
+/etc/sysctl.d/10-network-security.conf:net.ipv4.tcp_syncookies=1
+/etc/sysctl.d/99-sysctl.conf:#net.ipv4.tcp_syncookies=1
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.tcp_syncookies=1
+
+End:		1627887991.554112

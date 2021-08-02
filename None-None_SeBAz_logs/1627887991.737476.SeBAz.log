@@ -1,0 +1,7 @@
+Start:		1627887991.7376025
+Command:	ip6tables -L INPUT -v -n
+Output:
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+End:		1627887992.7486186

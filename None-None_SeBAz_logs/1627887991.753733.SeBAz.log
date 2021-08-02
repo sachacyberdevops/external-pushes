@@ -1,0 +1,7 @@
+Start:		1627887991.753811
+Command:	iptables -w -L INPUT -v -n
+Output:
+Chain INPUT (policy ACCEPT 7166 packets, 36M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+End:		1627887991.7701092

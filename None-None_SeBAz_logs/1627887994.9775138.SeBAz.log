@@ -1,0 +1,5 @@
+Start:		1627887994.9776154
+Command:	find /dev/sda15 -xdev -type f -perm -0002
+Output:
+
+End:		1627887994.997409

@@ -1,0 +1,12 @@
+Start:		1627887991.0457838
+Command:	timedatectl status
+Output:
+                      Local time: Mon 2021-08-02 07:06:31 UTC
+                  Universal time: Mon 2021-08-02 07:06:31 UTC
+                        RTC time: Mon 2021-08-02 07:06:30
+                       Time zone: Etc/UTC (UTC, +0000)
+       System clock synchronized: no
+systemd-timesyncd.service active: yes
+                 RTC in local TZ: no
+
+End:		1627887991.186552

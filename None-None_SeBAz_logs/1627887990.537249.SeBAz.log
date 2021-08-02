@@ -1,0 +1,7 @@
+Start:		1627887990.5373828
+Command:	grep "kernel\.randomize_va_space" /etc/sysctl.conf /etc/sysctl.d/*
+Output:
+/etc/sysctl.conf:kernel.randomize_va_space=2
+/etc/sysctl.d/99-sysctl.conf:kernel.randomize_va_space=2
+
+End:		1627887990.5566485

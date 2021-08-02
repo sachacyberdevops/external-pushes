@@ -1,0 +1,13 @@
+Start:		1627887992.2089293
+Command:	stat /etc/cron.weekly
+Output:
+  File: /etc/cron.weekly
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 1342        Links: 2
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-02 06:56:46.502141321 +0000
+Modify: 2021-07-21 00:36:34.801522842 +0000
+Change: 2021-07-30 06:10:18.004869946 +0000
+ Birth: -
+
+End:		1627887992.2263455

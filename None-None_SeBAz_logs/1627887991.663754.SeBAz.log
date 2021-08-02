@@ -1,0 +1,5 @@
+Start:		1627887991.6638358
+Command:	lsmod | grep tipc
+Output:
+
+End:		1627887991.6976697

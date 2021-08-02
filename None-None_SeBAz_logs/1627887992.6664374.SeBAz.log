@@ -1,0 +1,7 @@
+Start:		1627887992.6665616
+Command:	grep PASS_MAX_DAYS /etc/login.defs
+Output:
+#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+PASS_MAX_DAYS 365
+
+End:		1627887992.6829891

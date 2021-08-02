@@ -1,0 +1,5 @@
+Start:		1627887990.3384426
+Command:	mount | grep /var/log
+Output:
+
+End:		1627887990.3728716

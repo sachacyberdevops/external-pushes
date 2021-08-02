@@ -1,0 +1,9 @@
+Start:		1627887991.969278
+Command:	grep access /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_10.rules:-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_10.rules:-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_10.rules:-a always,exit -F arch=b64 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_10.rules:-a always,exit -F arch=b64 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access
+
+End:		1627887991.9821053

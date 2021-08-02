@@ -1,0 +1,7 @@
+Start:		1627887991.7704082
+Command:	grep max_log_file /etc/audit/auditd.conf
+Output:
+max_log_file = 10
+max_log_file_action = keep_logs
+
+End:		1627887991.7830024

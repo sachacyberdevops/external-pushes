@@ -1,0 +1,10 @@
+Start:		1627887991.845934
+Command:	grep time-change /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_3.rules:-a always,exit -F arch=b32 -S adjtimex -S settimeofday -S stime -k time-change
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_3.rules:-a always,exit -F arch=b32 -S clock_settime -k time-change
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_3.rules:-a always,exit -F arch=b64 -S adjtimex -S settimeofday -k time-change
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_3.rules:-a always,exit -F arch=b64 -S clock_settime -k time-change
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_3.rules:-w /etc/localtime -p wa -k time-change
+
+End:		1627887991.863329

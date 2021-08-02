@@ -1,0 +1,12 @@
+Start:		1627887992.1271095
+Command:	ls /etc/rc*.d | grep rsyslog
+Output:
+K01rsyslog
+K01rsyslog
+S01rsyslog
+S01rsyslog
+S01rsyslog
+S01rsyslog
+K01rsyslog
+
+End:		1627887992.1453853

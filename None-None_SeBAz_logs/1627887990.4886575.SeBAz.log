@@ -1,0 +1,5 @@
+Start:		1627887990.4887419
+Command:	grep "^\s*password" /boot/grub/menu.lst
+Output:
+
+End:		1627887990.5094311

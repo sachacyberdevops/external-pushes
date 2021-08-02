@@ -1,0 +1,6 @@
+Start:		1627887990.5749745
+Command:	sestatus
+Output:
+/bin/bash: sestatus: command not found
+
+End:		1627887990.5880861

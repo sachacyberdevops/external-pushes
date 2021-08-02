@@ -1,0 +1,7 @@
+Start:		1627887992.0050704
+Command:	grep mounts /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_12.rules:-a always,exit -F arch=b32 -S mount -F auid>=1000 -F auid!=4294967295 -k mounts
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_12.rules:-a always,exit -F arch=b64 -S mount -F auid>=1000 -F auid!=4294967295 -k mounts
+
+End:		1627887992.0232377

@@ -1,0 +1,5 @@
+Start:		1627887990.2923543
+Command:	mount | grep -E '\s/tmp\s' | grep -v nodev
+Output:
+
+End:		1627887990.3312218

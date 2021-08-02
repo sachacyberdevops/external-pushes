@@ -1,0 +1,9 @@
+Start:		1627887992.024766
+Command:	auditctl -l | grep delete
+Output:
+-a always,exit -F arch=b32 -S unlink,rename,unlinkat,renameat -F auid>=1000 -F auid!=-1 -F key=delete
+-a always,exit -F arch=b64 -S rename,unlink,unlinkat,renameat -F auid>=1000 -F auid!=-1 -F key=delete
+-a always,exit -F arch=b64 -S init_module,delete_module -F key=modules
+-a always,exit -F arch=b32 -S init_module,delete_module -F key=modules
+
+End:		1627887992.0478165

@@ -1,0 +1,6 @@
+Start:		1627887992.7489605
+Command:	grep "^root:" /etc/passwd | cut -f4 -d:
+Output:
+0
+
+End:		1627887992.7694075

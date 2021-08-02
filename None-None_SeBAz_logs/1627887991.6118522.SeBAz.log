@@ -1,0 +1,6 @@
+Start:		1627887991.6119385
+Command:	modprobe -n -v rds
+Output:
+install /bin/true 
+
+End:		1627887991.633321

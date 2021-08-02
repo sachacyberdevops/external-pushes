@@ -1,0 +1,5 @@
+Start:		1627887998.4997952
+Command:	find /dev/sda15 -xdev -nogroup
+Output:
+
+End:		1627887998.5035899

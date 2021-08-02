@@ -1,0 +1,5 @@
+Start:		1627887992.0449433
+Command:	find /dev/sdb1 -xdev \( -perm -4000 -o -perm -2000 \) -type f | awk '{print "-a always,exit -F path=" $1 " -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged" }'
+Output:
+
+End:		1627887992.0668797

@@ -1,0 +1,10 @@
+Start:		1627887992.0810137
+Command:	auditctl -l | grep modules
+Output:
+-w /sbin/insmod -p x -k modules
+-w /sbin/rmmod -p x -k modules
+-w /sbin/modprobe -p x -k modules
+-a always,exit -F arch=b64 -S init_module,delete_module -F key=modules
+-a always,exit -F arch=b32 -S init_module,delete_module -F key=modules
+
+End:		1627887992.1000473

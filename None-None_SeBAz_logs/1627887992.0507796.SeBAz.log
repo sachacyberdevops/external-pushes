@@ -1,0 +1,7 @@
+Start:		1627887992.0509057
+Command:	grep scope /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_14.rules:-w /etc/sudoers -p wa -k scope
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_14.rules:-w /etc/sudoers.d/ -p wa -k scope
+
+End:		1627887992.0695105

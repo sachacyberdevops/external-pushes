@@ -1,0 +1,7 @@
+Start:		1627887990.6791263
+Command:	stat /etc/motd | grep Access
+Output:
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-02 06:46:41.805881834 +0000
+
+End:		1627887990.7020142

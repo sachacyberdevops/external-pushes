@@ -1,0 +1,7 @@
+Start:		1627887991.8890824
+Command:	grep MAC-policy /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_6.rules:-w /etc/apparmor/ -p wa -k MAC-policy
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_6.rules:-w /etc/apparmor.d/ -p wa -k MAC-policy
+
+End:		1627887991.9030964

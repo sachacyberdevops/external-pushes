@@ -1,0 +1,12 @@
+Start:		1627887991.8865979
+Command:	grep system-locale /etc/audit/rules.d/*.rules
+Output:
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_5.rules:-a always,exit -F arch=b64 -S sethostname -S setdomainname -k system-locale
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_5.rules:-a always,exit -F arch=b32 -S sethostname -S setdomainname -k system-locale
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_5.rules:-w /etc/issue -p wa -k system-locale
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_5.rules:-w /etc/issue.net -p wa -k system-locale
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_5.rules:-w /etc/hosts -p wa -k system-locale
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_5.rules:-w /etc/network -p wa -k system-locale
+/etc/audit/rules.d/ubuntu1804cis_rule_4_1_5.rules:-w /etc/networks -p wa -k system-locale
+
+End:		1627887991.9019895

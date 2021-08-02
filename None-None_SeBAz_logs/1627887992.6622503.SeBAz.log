@@ -1,0 +1,7 @@
+Start:		1627887992.662327
+Command:	cat /etc/pam.d/common-password | grep sha512
+Output:
+# The "sha512" option enables salted SHA512 passwords.  Without this option,
+password	[success=1 default=ignore]	pam_unix.so obscure use_authtok try_first_pass sha512
+
+End:		1627887992.6798348

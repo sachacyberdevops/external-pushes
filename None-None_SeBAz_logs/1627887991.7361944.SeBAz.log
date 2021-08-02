@@ -1,0 +1,11 @@
+Start:		1627887991.7362816
+Command:	ss -4tuln
+Output:
+Netid  State    Recv-Q   Send-Q      Local Address:Port     Peer Address:Port   
+udp    UNCONN   0        0           127.0.0.53%lo:53            0.0.0.0:*      
+udp    UNCONN   0        0           10.1.0.4%eth0:68            0.0.0.0:*      
+udp    UNCONN   0        0               127.0.0.1:323           0.0.0.0:*      
+tcp    LISTEN   0        128         127.0.0.53%lo:53            0.0.0.0:*      
+tcp    LISTEN   0        128               0.0.0.0:22            0.0.0.0:*      
+
+End:		1627887991.753667

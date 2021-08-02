@@ -1,0 +1,13 @@
+Start:		1627887992.1921024
+Command:	stat /etc/crontab
+Output:
+  File: /etc/crontab
+  Size: 838       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 847         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-02 06:46:41.689438304 +0000
+Modify: 2021-07-30 06:09:00.128554190 +0000
+Change: 2021-07-30 06:10:17.572819980 +0000
+ Birth: -
+
+End:		1627887992.2083848

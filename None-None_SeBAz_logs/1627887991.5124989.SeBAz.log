@@ -1,0 +1,10 @@
+Start:		1627887991.5125842
+Command:	grep "net\.ipv4\.conf\.all\.rp_filter" /etc/sysctl.conf /etc/sysctl.d/*
+Output:
+/etc/sysctl.conf:#net.ipv4.conf.all.rp_filter=1
+/etc/sysctl.conf:net.ipv4.conf.all.rp_filter=1
+/etc/sysctl.d/10-network-security.conf:net.ipv4.conf.all.rp_filter=1
+/etc/sysctl.d/99-sysctl.conf:#net.ipv4.conf.all.rp_filter=1
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.conf.all.rp_filter=1
+
+End:		1627887991.5338137

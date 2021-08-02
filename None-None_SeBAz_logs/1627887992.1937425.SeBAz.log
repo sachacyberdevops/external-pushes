@@ -1,0 +1,131 @@
+Start:		1627887992.1938772
+Command:	cat /etc/logrotate.d/*
+Output:
+/var/log/alternatives.log {
+	daily
+	rotate 12
+	compress
+	delaycompress
+	missingok
+	notifempty
+	create 644 root root
+}
+/var/log/apt/term.log {
+  rotate 12
+  daily
+  compress
+  missingok
+  notifempty
+}
+
+/var/log/apt/history.log {
+  rotate 12
+  daily
+  compress
+  missingok
+  notifempty
+}
+
+/var/log/chrony/*.log {
+    missingok
+    nocreate
+    sharedscripts
+    postrotate
+        /usr/bin/chronyc cyclelogs > /dev/null 2>&1 || true
+    endscript
+}
+/var/log/dpkg.log {
+	daily
+	rotate 12
+	compress
+	delaycompress
+	missingok
+	notifempty
+	create 644 root root
+}
+/var/log/lxd/lxd.log {
+       copytruncate
+       daily
+       rotate 7
+       delaycompress
+       compress
+       notifempty
+       missingok
+}
+/var/log/syslog
+{
+	rotate 7
+	daily
+	missingok
+	notifempty
+	delaycompress
+	compress
+	postrotate
+		/usr/lib/rsyslog/rsyslog-rotate
+	endscript
+}
+
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/daemon.log
+/var/log/kern.log
+/var/log/auth.log
+/var/log/user.log
+/var/log/lpr.log
+/var/log/cron.log
+/var/log/debug
+/var/log/messages
+{
+	rotate 4
+	daily
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		/usr/lib/rsyslog/rsyslog-rotate
+	endscript
+}
+/var/log/ubuntu-advantage.log {
+    rotate 6
+    daily
+    compress
+    delaycompress
+    missingok
+    notifempty
+}
+/var/log/ufw.log
+{
+	rotate 4
+	daily
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		invoke-rc.d rsyslog rotate >/dev/null 2>&1 || true
+	endscript
+}
+/var/log/unattended-upgrades/unattended-upgrades.log 
+/var/log/unattended-upgrades/unattended-upgrades-dpkg.log
+/var/log/unattended-upgrades/unattended-upgrades-shutdown.log
+{
+  rotate 6
+  daily
+  compress
+  missingok
+  notifempty
+}
+/var/log/waagent.log {
+    compress
+    daily
+    rotate 6
+    notifempty
+    missingok
+}
+
+End:		1627887992.2062201

@@ -1,0 +1,8 @@
+Start:		1627887991.6433246
+Command:	grep "^\s*linux" /boot/grub*/grub.cfg | grep -v ipv6.disable=1
+Output:
+        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro recovery nomodeset dis_ucode_ldr console=tty1 console=ttyS0 earlyprintk=ttyS0
+
+End:		1627887991.6653502
