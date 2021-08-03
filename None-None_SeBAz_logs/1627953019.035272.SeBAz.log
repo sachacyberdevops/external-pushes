@@ -1,0 +1,5 @@
+Start:		1627953019.035338
+Command:	grep -E '(session|logins)' /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627953019.0382984

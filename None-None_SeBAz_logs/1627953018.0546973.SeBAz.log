@@ -1,0 +1,5 @@
+Start:		1627953018.0548043
+Command:	mount | grep -e '/media/'
+Output:
+
+End:		1627953018.0875716

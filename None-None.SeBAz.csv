@@ -1,0 +1,1759 @@
+Recommendation Number,Message,Result,Explanation,Time
+1.1.1.1,cramfs cannot be mounted,PASS,"install /bin/true 
+",0.04065418243408203
+1.1.1.2,freevxfs cannot be mounted,PASS,"install /bin/true 
+",0.04505133628845215
+1.1.1.3,jffs2 cannot be mounted,PASS,"install /bin/true 
+",0.047681570053100586
+1.1.1.4,hfs cannot be mounted,PASS,"install /bin/true 
+",0.04796957969665527
+1.1.1.5,hfsplus cannot be mounted,PASS,"install /bin/true 
+",0.045670509338378906
+1.1.1.6,squashfs mount status undetermined,PASS,"
+
+",0.06179022789001465
+1.1.1.7,udf mount status undetermined,PASS,"
+udf                   118784  0
+crc_itu_t              16384  1 udf
+
+",0.06647038459777832
+1.1.1.8,vfat is mounted,CHEK,"UUID=C4E4-E7F8	/boot/efi	vfat	umask=0077	0 1
+",0.01843881607055664
+1.1.2,/tmp is configured,PASS,"/usr/tmpDSK on /tmp type tmpfs (rw,nosuid,relatime,loop)
+",0.021533489227294922
+1.1.3,nodev is not set on /tmp,FAIL,"mount | grep -E '\s/tmp\s' returned the following
+/usr/tmpDSK on /tmp type tmpfs (rw,nosuid,relatime,loop)
+",0.053270578384399414
+1.1.4,nosuid is set on /tmp,PASS,"mount | grep -E '\s/tmp\s' | grep -v nosuid did not return anything
+",0.048667192459106445
+1.1.5,noexec is not set on /tmp,FAIL,"mount | grep -E '\s/tmp\s' | grep -v noexec returned the following
+/usr/tmpDSK on /tmp type tmpfs (rw,nosuid,relatime,loop)
+",0.07025885581970215
+1.1.6,/var is not configured,FAIL,mount | grep -E '\s/var\s' did not return any result,0.023504018783569336
+1.1.7,/var/tmp is not configured,FAIL,mount | grep /var/tmp did not return any result,0.03310108184814453
+1.1.8,nodev is not set on /var/tmp,FAIL,/var/tmp does not exist. nodev cannot be set on a partition that does not exist,0.021709680557250977
+1.1.9,nodev is not set on /var/tmp,FAIL,/var/tmp does not exist. nosuid cannot be set on a partition that does not exist,0.0272824764251709
+1.1.10,noexec is not set on /var/tmp,FAIL,/var/tmp does not exist. noexec cannot be set on a partition that does not exist,0.03530406951904297
+1.1.11,/var/log is not configured,FAIL,mount | grep /var/log did not return any result,0.03448033332824707
+1.1.12,/var/log/audit is not configured,FAIL,mount | grep /var/log/audit did not return any result,0.025023460388183594
+1.1.13,/home is not configured,FAIL,mount | grep /home did not return any result,0.03226208686828613
+1.1.14,nodev is not set on /home,FAIL,/home does not exist. nodev cannot be set on a partition that does not exist,0.022730588912963867
+1.1.15,nodev is set on /dev/shm,PASS,mount | grep -E '\s/dev/shm\s' | grep -v nodev did not return anything,0.07151436805725098
+1.1.16,nosuid is set on /dev/shm,PASS,mount | grep -E '\s/dev/shm\s' | grep -v nosuid did not return anything,0.05958271026611328
+1.1.17,noexec is not set on /dev/shm,FAIL,"tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+",0.06423616409301758
+1.1.18,No mounted media found,PASS,mount | grep -e '/media/' returned no result,0.02415323257446289
+1.1.19,No mounted media found,PASS,mount | grep -e '/media/' returned no result,0.03432798385620117
+1.1.20,No mounted media found,PASS,mount | grep -e '/media/' returned no result,0.021283864974975586
+1.1.21,sticky bit set on w-w directories,PASS,running df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type d \( -perm -0002 -a ! -perm -1000 \) 2>/dev/null confirms that all world writable directories have the sticky variable set,53.17956614494324
+1.1.22,automounting could not be checked,PASS,"Failed to get unit file state for autofs.service: No such file or directory
+",0.036063194274902344
+1.1.23,usb-storage cannot be mounted,PASS,"modprobe: FATAL: Module usb-storage not found in directory /lib/modules/5.4.0-1055-azure
+",0.03332829475402832
+1.2.1,package configuration not checked (ind distro),CHEK,Distribution was not specified,8.344650268554688e-05
+1.2.2,GPG keys source not checked (ind distro),CHEK,Distribution was not specified,1.621246337890625e-05
+1.3.1,AIDE not checked (ind distro),CHEK,Distribution was not specified,1.239776611328125e-05
+1.3.2,No AIDE cron jobs scheduled,FAIL,"grep -r aide /etc/cron.* /etc/crontab returned the following
+
+",0.0404820442199707
+1.4.1,bootloader permits group and others,FAIL,"Access: (0444/-r--r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 10:58:51.397284081 +1000
+",0.053177833557128906
+1.4.2,bootloader password not checked,CHEK,,0.04527640342712402
+1.4.3,auth not required for single user mode,FAIL,"grep ^root:[*\!]: /etc/shadow returned the following
+",0.004517793655395508
+1.4.4,interactive boot not checked,CHEK,"grep ""^PROMPT_FOR_CONFIRM="" /etc/sysconfig/boot returned the following
+
+grep: /etc/sysconfig/boot: No such file or directory
+",0.012973308563232422
+1.5.1,core dumps not restricted,FAIL,"Following are configured properly
+/etc/security/limits.d/core_dump.conf:* hard core 0
+
+fs.suid_dumpable = 2
+
+/etc/sysctl.conf:fs.suid_dumpable=0
+/etc/sysctl.d/99-sysctl.conf:fs.suid_dumpable=0
+
+
+Following are configured improperly
+",0.0630342960357666
+1.5.2,XD/NX support is enabled,PASS,"Aug 03 10:49:21 ubuntu kernel: NX (Execute Disable) protection: active
+Aug 03 11:03:42 pkrvme7e5btgg7z kernel: NX (Execute Disable) protection: active
+",0.0936117172241211
+1.5.3,ASLR not enabled,FAIL,"Following are configured properly
+kernel.randomize_va_space = 2
+
+
+Following are configured improperly
+
+
+",0.04284167289733887
+1.5.4,prelink not checked (ind distro),CHEK,Distribution was not specified,4.863739013671875e-05
+1.6.1.1,SELinux or AppArmor not checked (ind distro),CHEK,Distribution was not specified,3.266334533691406e-05
+1.6.2.1,SELinux not disabled boot-config,PASS,"kernel		/boot/vmlinuz-4.15.0-151-generic root=LABEL=cloudimg-rootfs ro console=hvc0 
+kernel		/boot/vmlinuz-4.15.0-151-generic root=LABEL=cloudimg-rootfs ro  single
+",0.007580757141113281
+1.6.2.2,SELinux state is not enforcing,FAIL,"Following are configured properly
+
+Following are configured improperly
+grep: /etc/selinux/config: No such file or directory
+
+
+/bin/bash: sestatus: command not found
+
+",0.011666059494018555
+1.6.2.3,SELinux policy is not configured,FAIL,"Following are configured properly
+
+Following are configured improperly
+
+grep: /etc/selinux/config: No such file or directory
+
+
+/bin/bash: sestatus: command not found
+
+",0.025576114654541016
+1.6.2.4,SETroubleshoot not checked (ind distro),CHEK,Distribution was not specified,4.38690185546875e-05
+1.6.2.5,mcstrans not checked (ind distro),CHEK,Distribution was not specified,9.226799011230469e-05
+1.6.2.6,no unconfined daemons exist,PASS,"ps -eZ | grep -E ""initrc"" | grep -E -v -w ""tr|ps|grep|bash|awk"" | tr ':' ' ' | awk '{ print $NF }' returned nothing",0.09079289436340332
+1.6.3.1,AppArmor not disabled boot-config,PASS,"kernel		/boot/vmlinuz-4.15.0-151-generic root=LABEL=cloudimg-rootfs ro console=hvc0 
+kernel		/boot/vmlinuz-4.15.0-151-generic root=LABEL=cloudimg-rootfs ro  single
+",0.016745567321777344
+1.6.3.2,all AppArmor Profiles are enforcing,PASS,"apparmor module is loaded.
+16 profiles are loaded.
+16 profiles are in enforce mode.
+   /sbin/dhclient
+   /usr/bin/freshclam
+   /usr/bin/lxc-start
+   /usr/bin/man
+   /usr/lib/NetworkManager/nm-dhcp-client.action
+   /usr/lib/NetworkManager/nm-dhcp-helper
+   /usr/lib/connman/scripts/dhclient-script
+   /usr/lib/snapd/snap-confine
+   /usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /usr/sbin/tcpdump
+   lxc-container-default
+   lxc-container-default-cgns
+   lxc-container-default-with-mounting
+   lxc-container-default-with-nesting
+   man_filter
+   man_groff
+0 profiles are in complain mode.
+1 processes have profiles defined.
+1 processes are in enforce mode.
+   /usr/bin/freshclam (1097) 
+0 processes are in complain mode.
+0 processes are unconfined but have a profile defined.
+",0.3918154239654541
+1.7.1.1,no message of the day,CHEK,"cat: /etc/motd: No such file or directory
+",0.007664918899536133
+1.7.1.2,login banner contains sensitive info,FAIL,"Following OS [or] patch level information were found in the local login banner
+Ubuntu 18.04.5 LTS \n \l
+
+",0.028741836547851562
+1.7.1.3,remote banner contains sensitive info,FAIL,"Following OS [or] patch level information were found in the remote login banner
+###############################################################################
+#This system is the property of Accenture, and is to be used in accordance    #
+#with applicable Accenture Policies.  Unauthorized access or activity is a    #
+#violation of Accenture Policies and may be a violation of law.  Use of this  #
+#system constitutes consent to monitoring or unauthorized use, in accordance  #
+#with Accenture Policies, local laws, and regulations.  Unauthorized use may  #
+#result in penalties including, but not limited to, reprimand, dismissal,     #
+#financial penalties, and legal action.                                       #
+###############################################################################
+",0.03984332084655762
+1.7.1.4,/etc/motd not found,CHEK,"stat /etc/motd | grep Access did not return anything
+stat: cannot stat '/etc/motd': No such file or directory
+",0.013759851455688477
+1.7.1.5,/etc/issue permissions configured,PASS,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 10:55:14.815652500 +1000
+",0.025325298309326172
+1.7.1.6,/etc/issue.net permissions configured,PASS,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:06:04.098254499 +1000
+",0.023055076599121094
+1.7.2,GDM not found,CHEK,"cat /etc/gdm3/greeter.dconf-defaults did not return anything
+cat: /etc/gdm3/greeter.dconf-defaults: No such file or directory
+",0.016935348510742188
+1.8,software not checked (ind distro),CHEK,Distribution was not specified,9.131431579589844e-05
+2.1.1,chargen is not present,PASS,"grep -R ""^chargen"" /etc/inetd.* returned the following
+grep: /etc/inetd.*: No such file or directory
+",0.02567577362060547
+2.1.2,daytime is not present,PASS,"grep -R ""^daytime"" /etc/inetd.* returned the following
+grep: /etc/inetd.*: No such file or directory
+",0.019580364227294922
+2.1.3,discard is not present,PASS,"grep -R ""^discard"" /etc/inetd.* returned the following
+grep: /etc/inetd.*: No such file or directory
+",0.020251750946044922
+2.1.4,echo is not present,PASS,"grep -R ""^echo"" /etc/inetd.* returned the following
+",0.18439030647277832
+2.1.5,time is not present,PASS,"grep -R ""^time"" /etc/inetd.* returned the following
+grep: /etc/inetd.*: No such file or directory
+",0.014095783233642578
+2.1.6,rsh services not present,PASS,"
+grep: /etc/inetd.*: No such file or directory
+
+grep: /etc/inetd.*: No such file or directory
+
+grep: /etc/inetd.*: No such file or directory
+
+",0.03954315185546875
+2.1.7,talk server not present,PASS,"
+grep: /etc/inetd.*: No such file or directory
+
+grep: /etc/inetd.*: No such file or directory
+
+",0.026314258575439453
+2.1.8,telnet server not present,PASS,"grep -R ""^telnet"" /etc/inetd.* returned the following
+grep: /etc/inetd.*: No such file or directory
+",0.012919425964355469
+2.1.9,tftp server not present,PASS,"grep -R ""^tftp"" /etc/inetd.* returned the following
+grep: /etc/inetd.*: No such file or directory
+",0.011948585510253906
+2.1.10,xinetd not found,PASS,"systemctl is-enabled xinetd returned the following
+Failed to get unit file state for xinetd.service: No such file or directory
+",0.016953468322753906
+2.2.1.1,time sync not checked (ind distro),CHEK,Distribution was not specified,8.654594421386719e-05
+2.2.1.2,ntp not configured,FAIL,"grep: /etc/ntp.conf: No such file or directory
+",0.020167112350463867
+2.2.1.3,remote server not configured,FAIL,"grep -E ""^(server|pool)"" /etc/chrony.conf returned the following
+grep: /etc/chrony.conf: No such file or directory
+",0.024719715118408203
+2.2.1.4,system clock not synchronized,FAIL,"enabled
+
+Ensure that the NTP servers, NTP FallbackNTP servers, and RootDistanceMaxSec listed are in accordance with local policy
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+#
+# Entries in this file show the compile time defaults.
+# You can change settings by editing this file.
+# Defaults can be restored by simply deleting this file.
+#
+# See timesyncd.conf(5) for details.
+
+[Time]
+#NTP=
+#FallbackNTP=ntp.ubuntu.com
+#RootDistanceMaxSec=5
+#PollIntervalMinSec=32
+#PollIntervalMaxSec=2048
+
+Failed to query server: Failed to activate service 'org.freedesktop.timedate1': timed out (service_start_timeout=25000ms)
+",25.09021806716919
+2.2.2,X Window System not checked (ind distro),CHEK,Distribution was not specified,4.363059997558594e-05
+2.2.3,avahi-daemon not found,PASS,"systemctl is-enabled avahi-daemon returned the following
+Failed to get unit file state for avahi-daemon.service: No such file or directory
+",0.02481698989868164
+2.2.4,cups not found,PASS,"systemctl is-enabled cups returned the following
+Failed to get unit file state for cups.service: No such file or directory
+",0.03135251998901367
+2.2.5,dhcpd not found,PASS,"systemctl is-enabled dhcpd returned the following
+Failed to get unit file state for dhcpd.service: No such file or directory
+",0.03662276268005371
+2.2.6,slapd not found,PASS,"systemctl is-enabled slapd returned the following
+Failed to get unit file state for slapd.service: No such file or directory
+",0.018284320831298828
+2.2.7,npc and rpcbind are disabled,PASS,"systemctl is-enabled nfs returned the following
+Failed to get unit file state for nfs.service: No such file or directory
+
+systemctl is-enabled rpcbind returned the following
+Failed to get unit file state for rpcbind.service: No such file or directory
+",0.03156685829162598
+2.2.8,named not found,PASS,"systemctl is-enabled named returned the following
+Failed to get unit file state for named.service: No such file or directory
+",0.01613450050354004
+2.2.9,vsftpd not found,PASS,"systemctl is-enabled vsftpd returned the following
+Failed to get unit file state for vsftpd.service: No such file or directory
+",0.021380186080932617
+2.2.10,httpd not found,PASS,"systemctl is-enabled httpd returned the following
+Failed to get unit file state for httpd.service: No such file or directory
+",0.030212879180908203
+2.2.11,dovecot not found,PASS,"systemctl is-enabled dovecot returned the following
+Failed to get unit file state for dovecot.service: No such file or directory
+",0.02678084373474121
+2.2.12,smb not found,PASS,"systemctl is-enabled smb returned the following
+Failed to get unit file state for smb.service: No such file or directory
+",0.016640186309814453
+2.2.13,squid not found,PASS,"systemctl is-enabled squid returned the following
+Failed to get unit file state for squid.service: No such file or directory
+",0.01850605010986328
+2.2.14,snmpd not found,PASS,"systemctl is-enabled snmpd returned the following
+Failed to get unit file state for snmpd.service: No such file or directory
+",0.019196748733520508
+2.2.15,mta is local only,PASS,"ss -lntu | grep -E ':25\s' | grep -E -v '\s(127.0.0.1|::1):25\s' returned the following
+",0.07698202133178711
+2.2.16,rsyncd not found,PASS,"systemctl is-enabled rsyncd returned the following
+Failed to get unit file state for rsyncd.service: No such file or directory
+",0.01915884017944336
+2.2.17,ypserv not found,PASS,"systemctl is-enabled ypserv returned the following
+Failed to get unit file state for ypserv.service: No such file or directory
+",0.01772332191467285
+2.3.1,NIS Client not checked (ind distro),CHEK,Distribution was not specified,4.553794860839844e-05
+2.3.2,rsh Client not checked (ind distro),CHEK,Distribution was not specified,1.5497207641601562e-05
+2.3.3,talk Client not checked (ind distro),CHEK,Distribution was not specified,1.2159347534179688e-05
+2.3.4,telnet Client not checked (ind distro),CHEK,Distribution was not specified,1.1682510375976562e-05
+2.3.5,LDAP Client not checked (ind distro),CHEK,Distribution was not specified,1.239776611328125e-05
+3.1.1,IP forwarding disabled,PASS,"net.ipv6.conf.all.forwarding = 0
+
+/etc/sysctl.conf:#net.ipv6.conf.all.forwarding=1
+/etc/sysctl.d/99-sysctl.conf:#net.ipv6.conf.all.forwarding=1
+",0.032678842544555664
+3.1.2,packet redirect sending is disabled,PASS,"net.ipv4.conf.default.send_redirects = 0
+
+/etc/sysctl.conf:net.ipv4.conf.default.send_redirects=0
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.conf.default.send_redirects=0
+",0.03630948066711426
+3.2.1,source routed packets are not accepted,PASS,"net.ipv6.conf.all.accept_source_route = 0
+
+/etc/sysctl.conf:#net.ipv6.conf.all.accept_source_route = 0
+/etc/sysctl.conf:net.ipv6.conf.all.accept_source_route=0
+/etc/sysctl.d/99-sysctl.conf:#net.ipv6.conf.all.accept_source_route = 0
+/etc/sysctl.d/99-sysctl.conf:net.ipv6.conf.all.accept_source_route=0
+
+net.ipv6.conf.default.accept_source_route = 0
+
+/etc/sysctl.conf:net.ipv6.conf.default.accept_source_route=0
+/etc/sysctl.d/99-sysctl.conf:net.ipv6.conf.default.accept_source_route=0
+",0.08060479164123535
+3.2.2,ICMP redirects not accepted,PASS,"net.ipv6.conf.all.accept_redirects = 0
+
+/etc/sysctl.conf:#net.ipv6.conf.all.accept_redirects = 0
+/etc/sysctl.conf:net.ipv6.conf.all.accept_redirects=0
+/etc/sysctl.d/99-sysctl.conf:#net.ipv6.conf.all.accept_redirects = 0
+/etc/sysctl.d/99-sysctl.conf:net.ipv6.conf.all.accept_redirects=0
+
+net.ipv6.conf.default.accept_redirects = 0
+
+/etc/sysctl.conf:net.ipv6.conf.default.accept_redirects=0
+/etc/sysctl.d/99-sysctl.conf:net.ipv6.conf.default.accept_redirects=0
+",0.07794427871704102
+3.2.3,secure ICMP redirects not accepted,PASS,"net.ipv4.conf.default.secure_redirects = 0
+
+/etc/sysctl.conf:net.ipv4.conf.default.secure_redirects=0
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.conf.default.secure_redirects=0
+",0.04273223876953125
+3.2.4,suspicious packets are logged,PASS,"net.ipv4.conf.default.log_martians = 1
+
+/etc/sysctl.conf:net.ipv4.conf.default.log_martians=1
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.conf.default.log_martians=1
+",0.04226183891296387
+3.2.5,ipv4 broadcasts not ignored,FAIL,"net.ipv4.icmp_echo_ignore_broadcasts = 0
+
+",0.008484601974487305
+3.2.6,bogus ICMP responses ignored,PASS,"net.ipv4.icmp_ignore_bogus_error_responses = 1
+
+/etc/sysctl.conf:net.ipv4.icmp_ignore_bogus_error_responses=1
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.icmp_ignore_bogus_error_responses=1
+",0.020933866500854492
+3.2.7,Reverse Path Filtering enabled,PASS,"net.ipv4.conf.default.rp_filter = 1
+
+/etc/sysctl.conf:#net.ipv4.conf.default.rp_filter=1
+/etc/sysctl.conf:net.ipv4.conf.default.rp_filter=1
+/etc/sysctl.d/10-network-security.conf:net.ipv4.conf.default.rp_filter=1
+/etc/sysctl.d/99-sysctl.conf:#net.ipv4.conf.default.rp_filter=1
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.conf.default.rp_filter=1
+",0.04150867462158203
+3.2.8,TCP SYN Cookies enabled,PASS,"net.ipv4.tcp_syncookies = 1
+
+/etc/sysctl.conf:#net.ipv4.tcp_syncookies=1
+/etc/sysctl.conf:net.ipv4.tcp_syncookies=1
+/etc/sysctl.d/10-network-security.conf:net.ipv4.tcp_syncookies=1
+/etc/sysctl.d/99-sysctl.conf:#net.ipv4.tcp_syncookies=1
+/etc/sysctl.d/99-sysctl.conf:net.ipv4.tcp_syncookies=1
+",0.020643949508666992
+3.2.9,ipv6 all ra accepted,FAIL,"net.ipv6.conf.all.accept_ra = 1
+
+",0.009904146194458008
+3.3.1,TCP Wrappers not checked (ind distro),CHEK,Distribution was not specified,5.888938903808594e-05
+3.3.2,/etc/hosts.allow not configured,FAIL,"# /etc/hosts.allow: list of hosts that are allowed to access the system.
+#                   See the manual pages hosts_access(5) and hosts_options(5).
+#
+# Example:    ALL: LOCAL @some_netgroup
+#             ALL: .foobar.edu EXCEPT terminalserver.foobar.edu
+#
+# If you're going to protect the portmapper use the name ""rpcbind"" for the
+# daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
+#
+
+
+",0.009877443313598633
+3.3.3,/etc/hosts.deny not configured,FAIL,"# /etc/hosts.deny: list of hosts that are _not_ allowed to access the system.
+#                  See the manual pages hosts_access(5) and hosts_options(5).
+#
+# Example:    ALL: some.host.name, .some.domain
+#             ALL EXCEPT in.fingerd: other.host.name, .other.domain
+#
+# If you're going to protect the portmapper use the name ""rpcbind"" for the
+# daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
+#
+# The PARANOID wildcard matches any host whose name does not match its
+# address.
+#
+# You may wish to enable this to ensure any programs that don't
+# validate looked up hostnames still leave understandable logs. In past
+# versions of Debian this has been the default.
+# ALL: PARANOID
+
+
+",0.009809255599975586
+3.3.4,/etc/hosts.allow permissions configured,PASS,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 10:55:12.051652500 +1000
+",0.01444244384765625
+3.3.5,/etc/hosts.deny permissions configured,PASS,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 10:55:12.051652500 +1000
+",0.015529394149780273
+3.4.1,dccp cannot be mounted,PASS,"install /bin/true 
+",0.027573585510253906
+3.4.2,sctp cannot be mounted,PASS,"install /bin/true 
+",0.033080339431762695
+3.4.3,rds cannot be mounted,PASS,"install /bin/true 
+",0.02531599998474121
+3.4.4,tipc cannot be mounted,PASS,"install /bin/true 
+",0.032742977142333984
+3.5.1.1,IPv6 default no deny policy,FAIL,"Chain INPUT (policy ACCEPT)
+Chain FORWARD (policy ACCEPT)
+Chain OUTPUT (policy ACCEPT)
+
+Following uses ipv6
+        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro recovery nomodeset dis_ucode_ldr console=tty1 console=ttyS0 earlyprintk=ttyS0
+",0.06874632835388184
+3.5.1.2,IPv6 input loopback no config,FAIL,"Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Following uses ipv6
+        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro recovery nomodeset dis_ucode_ldr console=tty1 console=ttyS0 earlyprintk=ttyS0
+",1.0252420902252197
+3.5.1.3,IPv6 Table contains no config,FAIL,"Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Following uses ipv6
+        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro recovery nomodeset dis_ucode_ldr console=tty1 console=ttyS0 earlyprintk=ttyS0
+",1.0131502151489258
+3.5.1.4,open ports no firewall rule,FAIL,"Following open ports were found
+Netid  State    Recv-Q   Send-Q      Local Address:Port     Peer Address:Port   
+tcp    LISTEN   0        128                  [::]:22               [::]:*      
+
+IPv6 input table configuration
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+",0.011592864990234375
+3.5.2.1,no default deny firewall,FAIL,"Chain INPUT (policy ACCEPT)
+Chain FORWARD (policy ACCEPT)
+Chain OUTPUT (policy ACCEPT)
+",0.02657794952392578
+3.5.2.2,fw input loopback no config,FAIL,"Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+",0.003635406494140625
+3.5.2.3,iptables contains no config,FAIL,"Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 2 packets, 440 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+",0.003216266632080078
+3.5.2.4,open ports no firewall rule,FAIL,"Following open ports were found
+Netid  State    Recv-Q   Send-Q      Local Address:Port     Peer Address:Port   
+udp    UNCONN   0        0           127.0.0.53%lo:53            0.0.0.0:*      
+udp    UNCONN   0        0           10.1.0.4%eth0:68            0.0.0.0:*      
+tcp    LISTEN   0        128         127.0.0.53%lo:53            0.0.0.0:*      
+tcp    LISTEN   0        128               0.0.0.0:22            0.0.0.0:*      
+
+iptables input configuration
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+",0.0064067840576171875
+3.5.3,iptables not checked (ind distro),CHEK,Distribution was not specified,3.504753112792969e-05
+3.6,wireless interfaces disabled,PASS,"/bin/bash: iwconfig: command not found
+",0.0022764205932617188
+3.7,IPv6 enabled,FAIL,"The following use IPv6
+        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro recovery nomodeset dis_ucode_ldr console=tty1 console=ttyS0 earlyprintk=ttyS0
+",0.004798173904418945
+4.1.1.1,audit log storage size is configured,PASS,"Ensure output is in compliance with site policy
+max_log_file = 8
+max_log_file_action = ROTATE
+",0.003080606460571289
+4.1.1.2,system disabled when audit logs full,PASS,"action_mail_acct = root
+
+admin_space_left_action = SUSPEND
+",0.009238481521606445
+4.1.1.3,audit logs automatically deleted,FAIL,"max_log_file_action = ROTATE
+",0.003101348876953125
+4.1.2,autitd not checked (ind distro),CHEK,Distribution was not specified,3.981590270996094e-05
+4.1.3,auditd runlevel S02 not found,FAIL,"enabled
+
+ls /etc/rc*.d | grep auditd returned the following
+K01auditd
+K01auditd
+S01auditd
+S01auditd
+S01auditd
+S01auditd
+K01auditd
+",0.011985063552856445
+4.1.4,processes prior to auditd not audited,FAIL,"        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro console=tty1 console=ttyS0 earlyprintk=ttyS0 
+	        linux	/boot/vmlinuz-5.4.0-1055-azure root=UUID=f89a10d0-2ae6-4411-9086-8ccd221055fd ro recovery nomodeset dis_ucode_ldr console=tty1 console=ttyS0 earlyprintk=ttyS0
+",0.003163576126098633
+4.1.5,events modifying date and time not coll,FAIL,,0.007295370101928711
+4.1.6,events modifying u/g info not coll,FAIL,,0.007165670394897461
+4.1.7,events modifying system's n/w env not coll,FAIL,"/bin/bash: grepsystem-locale: command not found
+",0.006534099578857422
+4.1.8,events modifying system's MAC not coll,FAIL,,0.0071086883544921875
+4.1.9,login and logout events not collected,FAIL,,0.007053375244140625
+4.1.10,session initiation info not collected,FAIL,,0.007218837738037109
+4.1.11,access control mod events not coll,FAIL,,0.00836634635925293
+4.1.12,unauthorized file access not coll,FAIL,,0.0072019100189208984
+4.1.13,privileged commands not collected,FAIL,"Following partitions were found
+/dev/sda1 on / type ext4 (rw,relatime,discard)
+/dev/sda15 on /boot/efi type vfat (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sdb1 on /mnt type ext4 (rw,relatime,x-systemd.requires=cloud-init.service)
+
+ABOVE was found on /dev/sda1
+
+ABOVE was found on /dev/sda15
+
+ABOVE was found on /dev/sdb1
+",0.02046036720275879
+4.1.14,successful fs mounts not collected,FAIL,,0.007235527038574219
+4.1.15,"unlink, rename *.rules events not coll",FAIL,"## First rule - delete all
+",0.007157802581787109
+4.1.16,changes to sudoers not collected,FAIL,,0.007710456848144531
+4.1.17,sudolog not collected,FAIL,,0.0071451663970947266
+4.1.18,kernel module not monitored,FAIL,,0.0070803165435791016
+4.1.19,audit configuration is mutable,FAIL,"-f 1
+
+",0.02266979217529297
+4.2.1.1,rsyslog not checked (ind distro),CHEK,Distribution was not specified,5.364418029785156e-05
+4.2.1.2,rsyslog runlevel S02 not found,FAIL,"enabled
+
+ls /etc/rc*.d | grep rsyslog returned the following
+K01rsyslog
+K01rsyslog
+S01rsyslog
+S01rsyslog
+S01rsyslog
+S01rsyslog
+K01rsyslog
+",0.014267444610595703
+4.2.1.3,logging is configured,CHEK,"Review the contents of rsyslog.conf
+#  /etc/rsyslog.conf	Configuration file for rsyslog.
+#
+#			For more information see
+#			/usr/share/doc/rsyslog-doc/html/rsyslog_conf.html
+#
+#  Default logging rules can be found in /etc/rsyslog.d/50-default.conf
+
+
+#################
+#### MODULES ####
+#################
+
+module(load=""imuxsock"") # provides support for local system logging
+#module(load=""immark"")  # provides --MARK-- message capability
+
+# provides UDP syslog reception
+#module(load=""imudp"")
+#input(type=""imudp"" port=""514"")
+
+# provides TCP syslog reception
+#module(load=""imtcp"")
+#input(type=""imtcp"" port=""514"")
+
+# provides kernel logging support and enable non-kernel klog messages
+module(load=""imklog"" permitnonkernelfacility=""on"")
+
+###########################
+#### GLOBAL DIRECTIVES ####
+###########################
+
+#
+# Use traditional timestamp format.
+# To enable high precision timestamps, comment out the following line.
+#
+$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat
+
+# Filter duplicated messages
+$RepeatedMsgReduction on
+
+#
+# Set the default permissions for all log files.
+#
+$FileOwner syslog
+$FileGroup adm
+$FileCreateMode 0640
+$DirCreateMode 0755
+$Umask 0022
+$PrivDropToUser syslog
+$PrivDropToGroup syslog
+
+#
+# Where to place spool and state files
+#
+$WorkDirectory /var/spool/rsyslog
+
+#
+# Include all config files in /etc/rsyslog.d/
+#
+$IncludeConfig /etc/rsyslog.d/*.conf
+Review the contents of rsyslog.d/*.conf
+# Log cloudinit generated log messages to file
+:syslogtag, isequal, ""[CLOUDINIT]"" /var/log/cloud-init.log
+
+# comment out the following line to allow CLOUDINIT messages through.
+# Doing so means you'll also get CLOUDINIT messages in /var/log/syslog
+& stop
+#  Default rules for rsyslog.
+#
+#			For more information see rsyslog.conf(5) and /etc/rsyslog.conf
+
+#
+# First some standard log files.  Log by facility.
+#
+auth,authpriv.*			/var/log/auth.log
+*.*;auth,authpriv.none		-/var/log/syslog
+#cron.*				/var/log/cron.log
+#daemon.*			-/var/log/daemon.log
+kern.*				-/var/log/kern.log
+#lpr.*				-/var/log/lpr.log
+mail.*				-/var/log/mail.log
+#user.*				-/var/log/user.log
+
+#
+# Logging for the mail system.  Split it up so that
+# it is easy to write scripts to parse these files.
+#
+#mail.info			-/var/log/mail.info
+#mail.warn			-/var/log/mail.warn
+mail.err			/var/log/mail.err
+
+#
+# Some ""catch-all"" log files.
+#
+#*.=debug;\
+#	auth,authpriv.none;\
+#	news.none;mail.none	-/var/log/debug
+#*.=info;*.=notice;*.=warn;\
+#	auth,authpriv.none;\
+#	cron,daemon.none;\
+#	mail,news.none		-/var/log/messages
+
+#
+# Emergencies are sent to everybody logged in.
+#
+*.emerg				:omusrmsg:*
+
+#
+# I like to have messages displayed on the console, but only on a virtual
+# console I usually leave idle.
+#
+#daemon,mail.*;\
+#	news.=crit;news.=err;news.=notice;\
+#	*.=debug;*.=info;\
+#	*.=notice;*.=warn	/dev/tty8
+verify that the log files are logging information
+total 1036
+-rw-r--r--  1 root      root              1545 Aug  3 10:58 alternatives.log
+drwxr-xr-x  2 root      root              4096 Sep 28  2018 apparmor
+drwxr-xr-x  2 root      root              4096 Aug  3 10:59 apt
+drwxr-x---  2 root      adm               4096 Aug  3 10:58 audit
+-rw-r-----  1 syslog    adm              81852 Aug  3 11:10 auth.log
+drwxr-xr-x  3 root      root              4096 Aug  3 11:07 azure
+-rw-rw----  1 root      utmp              4224 Aug  3 11:08 btmp
+drwxr-xr-x  2 clamav    clamav            4096 Aug  3 10:58 clamav
+-rw-r-----  1 root      adm               9832 Aug  3 11:03 cloud-init-output.log
+-rw-r--r--  1 syslog    adm             304258 Aug  3 11:03 cloud-init.log
+drwxr-xr-x  2 root      root              4096 Apr 21 07:36 dist-upgrade
+-rw-r--r--  1 root      root            108562 Aug  3 10:59 dpkg.log
+drwxr-sr-x+ 3 root      systemd-journal   4096 Aug  3 10:49 journal
+-rw-r-----  1 syslog    adm             114606 Aug  3 11:04 kern.log
+drwxr-xr-x  2 landscape landscape         4096 Aug  3 10:55 landscape
+-rw-rw-r--  1 root      utmp            292876 Aug  3 11:09 lastlog
+drwxr-xr-x  2 root      root              4096 Nov 24  2018 lxd
+drwxr-x---  2 root      adm               4096 Apr 14 22:52 samba
+-rw-r-----  1 syslog    adm             299352 Aug  3 11:10 syslog
+-rw-------  1 root      root             64192 Aug  3 11:07 tallylog
+-rw-------  1 root      root               664 Aug  3 10:55 ubuntu-advantage.log
+drwxr-x---  2 root      adm               4096 Aug  3 10:55 unattended-upgrades
+-rw-r--r--  1 root      root             28648 Aug  3 11:08 waagent.log
+-rw-rw-r--  1 root      utmp              6144 Aug  3 11:09 wtmp
+
+",0.009770870208740234
+4.2.1.4,rsyslog file permissions configured,PASS,"/etc/rsyslog.conf:$FileCreateMode 0640
+
+",0.003168821334838867
+4.2.1.5,rsyslog does not sends logs,FAIL,,0.0031566619873046875
+4.2.1.6,rsyslog messages not config,FAIL,,0.006201982498168945
+4.2.2.1,journald does not send logs to rsyslog,FAIL,"#ForwardToSyslog=yes
+",0.0032608509063720703
+4.2.2.2,journald not compress large log files,FAIL,"#Compress=yes
+",0.0030813217163085938
+4.2.2.3,journald does not write logfiles,FAIL,"#Storage=auto
+",0.0030972957611083984
+4.2.3,logfiles permissions not configured,FAIL,"   274082      4 -rw-r-----   1 clamav   clamav       2829 Aug  3 11:03 /var/log/clamav/freshclam.log
+   274124      0 -rw-r--r--   1 root     root            0 Aug  3 10:58 /var/log/clamav/clamscan.log
+   274209      4 -rw-r--r--   1 root     root         3070 Aug  3 11:07 /var/log/azure/Microsoft.OSTCExtensions.VMAccessForLinux/extension.log
+    85991      4 -rw-r--r--   1 root     root         1545 Aug  3 10:58 /var/log/alternatives.log
+    85860    296 -rw-r-----   1 syslog   adm        299352 Aug  3 11:10 /var/log/syslog
+    63368    112 -rw-r--r--   1 root     root       108562 Aug  3 10:59 /var/log/dpkg.log
+    85866     28 -rw-r--r--   1 root     root        28648 Aug  3 11:08 /var/log/waagent.log
+    63357      8 -rw-rw-r--   1 root     utmp         6144 Aug  3 11:09 /var/log/wtmp
+    85864      4 -rw-r--r--   1 root     root          112 Aug  3 10:59 /var/log/unattended-upgrades/unattended-upgrades-shutdown.log
+   274023     64 -rw-r-----   1 root     adm         58271 Aug  3 11:10 /var/log/audit/audit.log
+    85863      4 -rw-------   1 root     root          664 Aug  3 10:55 /var/log/ubuntu-advantage.log
+    85997   8192 -rw-r-----   1 root     systemd-journal  8388608 Aug  3 10:59 /var/log/journal/ef09bc837f2b4d4ca52d1acb2d456715/user-1000.journal
+    10253   8196 -rw-r-----   1 root     systemd-journal  8388608 Aug  3 11:10 /var/log/journal/ef09bc837f2b4d4ca52d1acb2d456715/system.journal
+    10689   8192 -rw-r-----   1 root     systemd-journal  8388608 Aug  3 11:09 /var/log/journal/ef09bc837f2b4d4ca52d1acb2d456715/user-1002.journal
+    86005      0 -rw-r--r--   1 root     root                   0 Aug  3 10:55 /var/log/landscape/sysinfo.log
+    63359     12 -rw-rw-r--   1 root     utmp              292876 Aug  3 11:09 /var/log/lastlog
+    10271    304 -rw-r--r--   1 syslog   adm               304258 Aug  3 11:03 /var/log/cloud-init.log
+    85862     84 -rw-r-----   1 syslog   adm                81852 Aug  3 11:10 /var/log/auth.log
+    85861    112 -rw-r-----   1 syslog   adm               114606 Aug  3 11:04 /var/log/kern.log
+      250     24 -rw-r--r--   1 root     root               24328 Aug  3 10:59 /var/log/apt/eipp.log.xz
+    63362     12 -rw-r--r--   1 root     root               10462 Aug  3 10:59 /var/log/apt/history.log
+    63361     32 -rw-r-----   1 root     adm                27698 Aug  3 10:59 /var/log/apt/term.log
+      310      8 -rw-------   1 root     root               64192 Aug  3 11:07 /var/log/tallylog
+    10270     12 -rw-r-----   1 root     adm                 9832 Aug  3 11:03 /var/log/cloud-init-output.log
+    63358      8 -rw-rw----   1 root     utmp                4224 Aug  3 11:08 /var/log/btmp
+",0.027485132217407227
+4.3,lograte is configured,CHEK,"verify logs in logrotate.conf are rotated according to site policy
+# see ""man logrotate"" for details
+# rotate log files weekly
+weekly
+
+# use the syslog group by default, since this is the owning group
+# of /var/log/syslog.
+su root syslog
+
+# keep 4 weeks worth of backlogs
+rotate 4
+
+# create new (empty) log files after rotating old ones
+create
+
+# uncomment this if you want your log files compressed
+#compress
+
+# packages drop log rotation information into this directory
+include /etc/logrotate.d
+
+# no packages own wtmp, or btmp -- we'll rotate them here
+/var/log/wtmp {
+    missingok
+    monthly
+    create 0664 root utmp
+    rotate 1
+}
+
+/var/log/btmp {
+    missingok
+    monthly
+    create 0660 root utmp
+    rotate 1
+}
+
+# system-specific logs may be configured here
+verify logs in logrotate directory are rotated according to site policy
+/var/log/alternatives.log {
+	monthly
+	rotate 12
+	compress
+	delaycompress
+	missingok
+	notifempty
+	create 644 root root
+}
+/var/log/apport.log {
+       daily
+       rotate 7
+       delaycompress
+       compress
+       notifempty
+       missingok
+}
+
+/var/log/apt/term.log {
+  rotate 12
+  monthly
+  compress
+  missingok
+  notifempty
+}
+
+/var/log/apt/history.log {
+  rotate 12
+  monthly
+  compress
+  missingok
+  notifempty
+}
+
+/var/log/clamav/freshclam.log {
+     rotate 12
+     weekly
+     compress
+     delaycompress
+     missingok
+     create 640  clamav adm
+     postrotate
+     if [ -d /run/systemd/system ]; then
+         systemctl -q is-active clamav-freshclam && systemctl kill --signal=SIGHUP clamav-freshclam || true
+     else
+         invoke-rc.d clamav-freshclam reload-log > /dev/null || true
+     fi
+     endscript
+     }
+/var/log/dpkg.log {
+	monthly
+	rotate 12
+	compress
+	delaycompress
+	missingok
+	notifempty
+	create 644 root root
+}
+/var/log/lxd/lxd.log {
+       copytruncate
+       daily
+       rotate 7
+       delaycompress
+       compress
+       notifempty
+       missingok
+}
+/var/log/syslog
+{
+	rotate 7
+	daily
+	missingok
+	notifempty
+	delaycompress
+	compress
+	postrotate
+		/usr/lib/rsyslog/rsyslog-rotate
+	endscript
+}
+
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/daemon.log
+/var/log/kern.log
+/var/log/auth.log
+/var/log/user.log
+/var/log/lpr.log
+/var/log/cron.log
+/var/log/debug
+/var/log/messages
+{
+	rotate 4
+	weekly
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		/usr/lib/rsyslog/rsyslog-rotate
+	endscript
+}
+/var/log/ubuntu-advantage.log {
+    rotate 6
+    monthly
+    compress
+    delaycompress
+    missingok
+    notifempty
+}
+/var/log/unattended-upgrades/unattended-upgrades.log 
+/var/log/unattended-upgrades/unattended-upgrades-dpkg.log
+/var/log/unattended-upgrades/unattended-upgrades-shutdown.log
+{
+  rotate 6
+  monthly
+  compress
+  missingok
+  notifempty
+}
+/var/log/waagent.log {
+    compress
+    monthly
+    rotate 6
+    notifempty
+    missingok
+}
+
+",0.006582736968994141
+5.1.1,cron daemon not found,FAIL,"systemctl is-enabled crond returned the following
+Failed to get unit file state for crond.service: No such file or directory
+",0.00683283805847168
+5.1.2,perms on /etc/crontab not configured,FAIL,"  File: /etc/crontab
+  Size: 722       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 847         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 10:59:01.661547172 +1000
+Modify: 2021-08-03 10:58:17.473149531 +1000
+Change: 2021-08-03 10:58:17.473149531 +1000
+ Birth: -
+
+",0.0038738250732421875
+5.1.3,perms on /etc/cron.hourly not configured,FAIL,"  File: /etc/cron.hourly
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 1338        Links: 2
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:10:18.317069875 +1000
+Modify: 2021-08-03 10:58:17.629149579 +1000
+Change: 2021-08-03 10:58:17.629149579 +1000
+ Birth: -
+
+",0.003528594970703125
+5.1.4,perms on /etc/cron.daily not configured,FAIL,"  File: /etc/cron.daily
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 413         Links: 2
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:10:18.249069345 +1000
+Modify: 2021-08-03 10:58:17.753149618 +1000
+Change: 2021-08-03 10:58:17.753149618 +1000
+ Birth: -
+
+",0.003513813018798828
+5.1.5,perms on /etc/cron.weekly not configured,FAIL,"  File: /etc/cron.weekly
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 1342        Links: 2
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:10:18.313069843 +1000
+Modify: 2021-08-03 10:58:17.877149656 +1000
+Change: 2021-08-03 10:58:17.877149656 +1000
+ Birth: -
+
+",0.0035314559936523438
+5.1.6,perms on /etc/cron.monthly not configured,FAIL,"  File: /etc/cron.monthly
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 1340        Links: 2
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:10:18.249069345 +1000
+Modify: 2021-08-03 10:58:17.997149694 +1000
+Change: 2021-08-03 10:58:17.997149694 +1000
+ Birth: -
+
+",0.003522634506225586
+5.1.7,perms on /etc/cron.d not configured,FAIL,"  File: /etc/cron.d
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 1334        Links: 2
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 10:59:01.661547172 +1000
+Modify: 2021-08-03 10:58:18.121149732 +1000
+Change: 2021-08-03 10:58:18.121149732 +1000
+ Birth: -
+
+",0.0034942626953125
+5.1.8,/etc/at.deny exists,FAIL,"stat: cannot stat '/etc/cron.deny': No such file or directory
+
+stat /etc/at.deny returned the following
+",0.007970571517944336
+5.2.1,perms on sshd_config not configured,FAIL,"  File: /etc/ssh/sshd_config
+  Size: 3435      	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 1028        Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:07:40.143095157 +1000
+Modify: 2021-08-03 11:07:40.111094429 +1000
+Change: 2021-08-03 11:07:40.111094429 +1000
+ Birth: -
+
+",0.003559589385986328
+5.2.2,SSH private host keys perms config,PASS,"  File: /etc/ssh/ssh_host_rsa_key
+  Size: 1823      	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 309         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.943666700 +1000
+Modify: 2021-08-03 11:03:51.155666700 +1000
+Change: 2021-08-03 11:03:51.155666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_dsa_key
+  Size: 1369      	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 752         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.427666700 +1000
+Modify: 2021-08-03 11:03:51.427666700 +1000
+Change: 2021-08-03 11:03:51.427666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_ed25519_key
+  Size: 399       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 919         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.947666700 +1000
+Modify: 2021-08-03 11:03:51.435666700 +1000
+Change: 2021-08-03 11:03:51.435666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_ecdsa_key
+  Size: 505       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 917         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.943666700 +1000
+Modify: 2021-08-03 11:03:51.431666700 +1000
+Change: 2021-08-03 11:03:51.431666700 +1000
+ Birth: -
+",0.019246816635131836
+5.2.3,SSH public host keys perms config,PASS,"  File: /etc/ssh/ssh_host_ed25519_key.pub
+  Size: 92        	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 1563        Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.439666700 +1000
+Modify: 2021-08-03 11:03:51.435666700 +1000
+Change: 2021-08-03 11:03:51.435666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_dsa_key.pub
+  Size: 600       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 773         Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:59.655666700 +1000
+Modify: 2021-08-03 11:03:51.427666700 +1000
+Change: 2021-08-03 11:03:51.427666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_rsa_key.pub
+  Size: 392       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 726         Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.439666700 +1000
+Modify: 2021-08-03 11:03:51.155666700 +1000
+Change: 2021-08-03 11:03:51.155666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_ecdsa_key.pub
+  Size: 172       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 918         Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.439666700 +1000
+Modify: 2021-08-03 11:03:51.431666700 +1000
+Change: 2021-08-03 11:03:51.431666700 +1000
+ Birth: -
+",0.019464492797851562
+5.2.4,SSH Protocol not 2,FAIL,"grep ^Protocol /etc/ssh/sshd_config returned the following
+",0.0034558773040771484
+5.2.5,SSH LogLevel is appropriate,PASS,"loglevel INFO
+",0.00838613510131836
+5.2.6,SSH X11 forwarding not disabled,FAIL,"sshd -T | grep x11forwarding returned the following
+x11forwarding no
+",0.006991863250732422
+5.2.7,SSH MaxAuthTries is more than 4,FAIL,"maxauthtries 6
+",0.00681614875793457
+5.2.8,SSH IgnoreRhosts is disabled,FAIL,"sshd -T | grep ignorerhosts returned the following
+ignorerhosts yes
+",0.006619691848754883
+5.2.9,SSH HBA is enabled,FAIL,"sshd -T | grep hostbasedauthentication returned the following
+hostbasedauthentication no
+",0.006774187088012695
+5.2.10,SSH root login is enabled,FAIL,"sshd -T | grep permitrootlogin returned the following
+permitrootlogin no
+",0.006684064865112305
+5.2.11,SSH PermitEmptyPasswords is enabled,FAIL,"sshd -T | grep permitemptypasswords returned the following
+permitemptypasswords no
+",0.0065648555755615234
+5.2.12,SSH PermitUserEnvironment is enabled,FAIL,"sshd -T | grep permituserenvironment returned the following
+permituserenvironment no
+",0.007963180541992188
+5.2.13,SSH only strong Ciphers are used,PASS,"ciphers chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com
+",0.006688833236694336
+5.2.14,SSH only strong MAC algorithms are used,PASS,"macs hmac-sha2-256,hmac-sha2-512,hmac-sha1
+",0.0067980289459228516
+5.2.15,SSH only strong Key Exchange algorithms are used,PASS,"kexalgorithms curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1
+",0.006661891937255859
+5.2.16,SSH ClientAliveInterval more than 300,FAIL,"clientaliveinterval 600
+",0.006764411926269531
+5.2.17,SSH LoginGraceTime is 60,PASS,"logingracetime 60
+",0.006712198257446289
+5.2.18,SSH access is not limited,FAIL,,0.0278933048248291
+5.2.19,SSH warning banner is not configured,FAIL,"sshd -T | grep banner returned the following
+banner /etc/issue.net
+",0.0067462921142578125
+5.2.20,SSH PAM is enabled,PASS,"usepam yes
+",0.006654977798461914
+5.2.21,SSH AllowTcpForwarding is enabled,FAIL,"sshd -T | grep -i allowtcpforwarding returned the following
+allowtcpforwarding no
+",0.006740570068359375
+5.2.22,SSH MaxStartups is configured,CHEK,"verify that output of MaxStartups matches site policy
+maxstartups 10:30:100
+",0.006803035736083984
+5.2.23,SSH MaxSessions is set to 10,CHEK,"verify that output of MaxSessions matches site policy
+maxsessions 10
+",0.006649494171142578
+5.3.1,password creation req not found,FAIL,"cat: /etc/pam.d/system-auth: No such file or directory
+cat: /etc/pam.d/system-auth: No such file or directory
+cat: /etc/security/pwquality.conf: No such file or directory
+",0.020473480224609375
+5.3.2,failed password lockout configured,CHEK,"Verify password lockouts are configured and pam_faillock.so lines should surround a pam_unix.so
+#
+# /etc/pam.d/common-auth - authentication settings common to all services
+#
+# This file is included from other service-specific PAM config files,
+# and should contain a list of the authentication modules that define
+# the central authentication scheme for use on the system
+# (e.g., /etc/shadow, LDAP, Kerberos, etc.).  The default is to use the
+# traditional Unix authentication mechanisms.
+#
+# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.
+# To take advantage of this, it is recommended that you configure any
+# local modules either before or after the default block, and use
+# pam-auth-update to manage selection of other modules.  See
+# pam-auth-update(8) for details.
+
+# here are the per-package modules (the ""Primary"" block)
+auth	[success=1 default=ignore]	pam_unix.so nullok_secure
+# here's the fallback if no module succeeds
+auth	requisite			pam_deny.so
+# prime the stack with a positive return value if there isn't one already;
+# this avoids us returning an error just because nothing sets a success code
+# since the modules above will each just jump around
+auth	required			pam_permit.so
+# and here are more per-package modules (the ""Additional"" block)
+auth	optional			pam_cap.so 
+# end of pam-auth-update config
+
+cat: /etc/pam.d/system-auth: No such file or directory
+cat: /etc/pam.d/password-auth: No such file or directory
+",0.008734703063964844
+5.3.3,password reuse not limited,FAIL,"cat: /etc/pam.d/system-auth: No such file or directory
+",0.008120536804199219
+5.3.4,password hashing algorithm is SHA-512,CHEK,"ensure the sha512 option is included in all results
+# The ""sha512"" option enables salted SHA512 passwords.  Without this option,
+password	[success=1 default=ignore]	pam_unix.so obscure sha512
+
+cat: /etc/pam.d/system-auth: No such file or directory
+cat: /etc/pam.d/password-auth: No such file or directory
+",0.012272357940673828
+5.4.1.1,password expiration not 365 days or less,FAIL,"#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+PASS_MAX_DAYS	99999
+",0.003141641616821289
+5.4.1.2,password changes not 7 days or more,FAIL,"#	PASS_MIN_DAYS	Minimum number of days allowed between password changes.
+PASS_MIN_DAYS	0
+",0.003179311752319336
+5.4.1.3,password change warning gt 7 days,PASS,"verify PASS_WARN_AGE conforms to site policy
+#	PASS_WARN_AGE	Number of days warning given before a password expires.
+PASS_WARN_AGE	7
+
+Users PASS_WARN_AGE
+azureuser:7
+adminuser:7
+",0.007353305816650391
+5.4.1.4,inactive password lock more than 30 days,FAIL,"INACTIVE=-1
+",0.004931926727294922
+5.4.1.5,last password change date in past,PASS,"for usr in $(cut -d: -f1 /etc/shadow); do [[ $(chage --list $usr | grep '^Last password change' | cut -d: -f2) > $(date) ]] && echo ""$usr :$(chage --list $usr | grep '^Last password change' | cut -d: -f2)""; done
+returned the following
+",0.24812912940979004
+5.4.2,system accounts are secured,PASS,"
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+/etc/host.conf: line 7: bad command `nospoof on'
+",0.38025522232055664
+5.4.3,root account GID is 0,PASS,"grep ""^root:"" /etc/passwd | cut -f4 -d: returned
+0
+",0.012764453887939453
+5.4.4,umask not found in bashrc,FAIL,"grep: /etc/bashrc: No such file or directory
+",0.01351022720336914
+5.4.5,shell timeout not in bashrc,FAIL,"grep ""^TMOUT"" /etc/bashrc returned the following
+grep: /etc/bashrc: No such file or directory
+",0.011754274368286133
+5.5,root login is restricted to system,PASS,"check if following are valid terminals that may be logged in directly as root
+# /etc/securetty: list of terminals on which root is allowed to login.
+# See securetty(5) and login(1).
+#
+console
+#
+# Local X displays (allows empty passwords with pam_unix's nullok_secure)
+#:0
+#:0.0
+#:0.1
+#:1
+#:1.0
+#:1.1
+#:2
+#:2.0
+#:2.1
+#:3
+#:3.0
+#:3.1
+#...
+#
+#
+# ==========================================================
+#
+# TTYs sorted by major number according to Documentation/devices.txt
+#
+# ==========================================================
+#
+# Virtual consoles
+#tty1
+#tty2
+#tty3
+#tty4
+#tty5
+#tty6
+#tty7
+#tty8
+#tty9
+#tty10
+#tty11
+#tty12
+#tty13
+#tty14
+#tty15
+#tty16
+#tty17
+#tty18
+#tty19
+#tty20
+#tty21
+#tty22
+#tty23
+#tty24
+#tty25
+#tty26
+#tty27
+#tty28
+#tty29
+#tty30
+#tty31
+#tty32
+#tty33
+#tty34
+#tty35
+#tty36
+#tty37
+#tty38
+#tty39
+#tty40
+#tty41
+#tty42
+#tty43
+#tty44
+#tty45
+#tty46
+#tty47
+#tty48
+#tty49
+#tty50
+#tty51
+#tty52
+#tty53
+#tty54
+#tty55
+#tty56
+#tty57
+#tty58
+#tty59
+#tty60
+#tty61
+#tty62
+#tty63
+#
+# UART serial ports
+#ttyS0
+#ttyS1
+#ttyS2
+#ttyS3
+#ttyS4
+#ttyS5
+#...ttyS191
+#
+# Serial Mux devices	(Linux/PA-RISC only)
+#ttyB0
+#ttyB1
+#...
+#
+# Chase serial card
+#ttyH0
+#ttyH1
+#...
+#
+# Cyclades serial cards
+#ttyC0
+#ttyC1
+#...ttyC31
+#
+# Digiboard serial cards
+#ttyD0
+#ttyD1
+#...
+#
+# Stallion serial cards
+#ttyE0
+#ttyE1
+#...ttyE255
+#
+# Specialix serial cards
+#ttyX0
+#ttyX1
+#...
+#
+# Comtrol Rocketport serial cards
+#ttyR0
+#ttyR1
+#...
+#
+# SDL RISCom serial cards
+#ttyL0
+#ttyL1
+#...
+#
+# Hayes ESP serial card
+#ttyP0
+#ttyP1
+#...
+#
+# Computone IntelliPort II serial card
+#ttyF0
+#ttyF1
+#...ttyF255
+#
+# Specialix IO8+ serial card
+#ttyW0
+#ttyW1
+#...
+#
+# Comtrol VS-1000 serial controller
+#ttyV0
+#ttyV1
+#...
+#
+# ISI serial card
+#ttyM0
+#ttyM1
+#...
+#
+# Technology Concepts serial card
+#ttyT0
+#ttyT1
+#...
+#
+# Specialix RIO serial card
+#ttySR0
+#ttySR1
+#...ttySR511
+#
+# Chase Research AT/PCI-Fast serial card
+#ttyCH0
+#ttyCH1
+#...ttyCH63
+#
+# Moxa Intellio serial card
+#ttyMX0
+#ttyMX1
+#...ttyMX127
+#
+# SmartIO serial card
+#ttySI0
+#ttySI1
+#...
+#
+# USB dongles
+#ttyUSB0
+#ttyUSB1
+#ttyUSB2
+#...
+#
+# LinkUp Systems L72xx UARTs
+#ttyLU0
+#ttyLU1
+#ttyLU2
+#ttyLU3
+#
+# StrongARM builtin serial ports
+#ttySA0
+#ttySA1
+#ttySA2
+#
+# SCI serial port (SuperH) ports and SC26xx serial ports
+#ttySC0
+#ttySC1
+#ttySC2
+#ttySC3
+#ttySC4
+#ttySC5
+#ttySC6
+#ttySC7
+#ttySC8
+#ttySC9
+#
+# ARM ""AMBA"" serial ports
+#ttyAM0
+#ttyAM1
+#ttyAM2
+#ttyAM3
+#ttyAM4
+#ttyAM5
+#ttyAM6
+#ttyAM7
+#ttyAM8
+#ttyAM9
+#ttyAM10
+#ttyAM11
+#ttyAM12
+#ttyAM13
+#ttyAM14
+#ttyAM15
+#
+# Embedded ARM AMBA PL011 ports (e.g. emulated by QEMU)
+#ttyAMA0
+#ttyAMA1
+#ttyAMA2
+#ttyAMA3
+#
+# DataBooster serial ports
+#ttyDB0
+#ttyDB1
+#ttyDB2
+#ttyDB3
+#ttyDB4
+#ttyDB5
+#ttyDB6
+#ttyDB7
+#
+# SGI Altix console ports
+#ttySG0
+#
+# Motorola i.MX ports
+#ttySMX0
+#ttySMX1
+#ttySMX2
+#
+# Marvell MPSC ports
+#ttyMM0
+#ttyMM1
+#
+# PPC CPM (SCC or SMC) ports
+#ttyCPM0
+#ttyCPM1
+#ttyCPM2
+#ttyCPM3
+#ttyCPM4
+#ttyCPM5
+#
+# Altix serial cards
+#ttyIOC0
+#ttyIOC1
+#...ttyIOC31
+#
+# NEC VR4100 series SIU
+#ttyVR0
+#
+# NEC VR4100 series SSIU
+#ttyVR1
+#
+# Altix ioc4 serial cards
+#ttyIOC84
+#ttyIOC85
+#...ttyIOC115
+#
+# Altix ioc3 serial cards
+#ttySIOC0
+#ttySIOC1
+#...ttySIOC31
+#
+# PPC PSC ports
+#ttyPSC0
+#ttyPSC1
+#ttyPSC2
+#ttyPSC3
+#ttyPSC4
+#ttyPSC5
+#
+# ATMEL serial ports
+#ttyAT0
+#ttyAT1
+#...ttyAT15
+#
+# Hilscher netX serial port
+#ttyNX0
+#ttyNX1
+#...ttyNX15
+#
+# Xilinx uartlite - port
+#ttyUL0
+#ttyUL1
+#ttyUL2
+#ttyUL3
+#
+# Xen virtual console - port 0
+#xvc0
+#
+# pmac_zilog - port
+#ttyPZ0
+#ttyPZ1
+#ttyPZ2
+#ttyPZ3
+#
+# TX39/49 serial port
+#ttyTX0
+#ttyTX1
+#ttyTX2
+#ttyTX3
+#ttyTX4
+#ttyTX5
+#ttyTX6
+#ttyTX7
+#
+# SC26xx serial ports (see SCI serial ports (SuperH))
+#
+# MAX3100 serial ports
+#ttyMAX0
+#ttyMAX1
+#ttyMAX2
+#ttyMAX3
+#
+# OMAP serial ports
+#ttyO0
+#ttyO1
+#ttyO2
+#ttyO3
+#
+# User space serial ports
+#ttyU0
+#ttyU1
+#
+# A2232 serial card
+#ttyY0
+#ttyY1
+#
+# IBM 3270 terminal Unix tty access
+#3270/tty1
+#3270/tty2
+#...
+#
+# IBM iSeries/pSeries virtual console
+#hvc0
+#hvc1
+#...
+#IBM pSeries console ports
+#hvsi0
+#hvsi1
+#hvsi2
+#
+# Equinox SST multi-port serial boards
+#ttyEQ0
+#ttyEQ1
+#...ttyEQ1027
+#
+# ==========================================================
+#
+# Not in Documentation/Devices.txt
+#
+# ==========================================================
+#
+# Embedded Freescale i.MX ports
+#ttymxc0
+#ttymxc1
+#ttymxc2
+#ttymxc3
+#ttymxc4
+#ttymxc5
+#
+# LXC (Linux Containers)
+#lxc/console
+#lxc/tty1
+#lxc/tty2
+#lxc/tty3
+#lxc/tty4
+#
+# Serial Console for MIPS Swarm
+#duart0
+#duart1
+#
+# s390 and s390x ports in LPAR mode
+#ttysclp0
+#
+# ODROID XU4 serial console
+#ttySAC0
+#ttySAC1
+#ttySAC2
+#ttySAC3
+",0.008905649185180664
+5.6,access to su command not restricted,FAIL,"# auth       required   pam_wheel.so
+# auth       sufficient pam_wheel.so trust
+# auth       required   pam_wheel.so deny group=nosu
+",0.010680675506591797
+6.1.1,system file perms not checked (ind distro),CHEK,Distribution was not specified,4.38690185546875e-05
+6.1.2,/etc/passwd permissions configured,PASS,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:07:40.147095248 +1000
+",0.013026714324951172
+6.1.3,/etc/shadow permissions configured,PASS,"Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (   42/  shadow)
+Access: 2021-08-03 11:07:40.523103808 +1000
+",0.01350259780883789
+6.1.4,/etc/group permissions configured,PASS,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:07:40.523103808 +1000
+",0.014556646347045898
+6.1.5,/etc/gshadow permissions configured,PASS,"Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (   42/  shadow)
+Access: 2021-08-03 11:07:40.007092061 +1000
+",0.013590097427368164
+6.1.6,/etc/passwd- permits group and others,FAIL,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:07:40.000000000 +1000
+",0.012445926666259766
+6.1.7,/etc/shadow- permissions configured,PASS,"Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (   42/  shadow)
+Access: 2021-08-03 11:07:40.000000000 +1000
+",0.015473604202270508
+6.1.8,/etc/group- permissions configured,PASS,"Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.000000000 +1000
+",0.014743328094482422
+6.1.9,/etc/gshadow- permissions configured,PASS,"Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (   42/  shadow)
+Access: 2021-08-03 11:07:39.000000000 +1000
+",0.013281106948852539
+6.1.10,world writable files does not exist,PASS,"running df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -0002 confirms that all world writable directories have the sticky variable set
+",51.402180671691895
+6.1.11,no unowned files or directories exist,PASS,"running df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -nouser confirms that no unowned files or directories exist
+",51.4169487953186
+6.1.12,no ungrouped files or directories exist,PASS,"running df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -nogroup confirms that no ungrouped files or directories exist
+",51.22075080871582
+6.1.13,SUID executables found,FAIL,"The following SUID executables exist
+/sbin/mount.cifs
+/bin/mount
+/bin/fusermount
+/bin/umount
+/bin/ping
+/bin/su
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/newgidmap
+/usr/bin/sudo
+/usr/bin/gpasswd
+/usr/bin/pkexec
+/usr/bin/at
+/usr/bin/traceroute6.iputils
+/usr/bin/newuidmap
+/usr/bin/passwd
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/openssh/ssh-keysign
+/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/snapd/snap-confine
+/usr/libexec/ssh-keysign
+",27.766192197799683
+6.1.14,SGID executables found,FAIL,"The following SGID executables exist
+/sbin/pam_extrausers_chkpwd
+/sbin/unix_chkpwd
+/usr/bin/crontab
+/usr/bin/mlocate
+/usr/bin/bsd-write
+/usr/bin/at
+/usr/bin/expiry
+/usr/bin/chage
+/usr/bin/wall
+/usr/lib/x86_64-linux-gnu/utempter/utempter
+",0.9236314296722412
+6.2.1,password fields are not empty,PASS,"awk -F: '($2 == """" ) { print $1 "" does not have a password ""}' /etc/shadow returned the following
+",0.025900602340698242
+6.2.2,"no legacy ""+"" entries exist in /etc/passwd",PASS,"grep '^\+:' /etc/passwd returned the following
+",0.022373437881469727
+6.2.3,"no legacy ""+"" entries exist in /etc/shadow",PASS,"grep '^\+:' /etc/shadow returned the following
+",0.01516580581665039
+6.2.4,"no legacy ""+"" entries exist in /etc/group",PASS,"grep '^\+:' /etc/group returned the following
+",0.02088308334350586
+6.2.5,root is the only UID 0 account,PASS,"awk -F: '($3 == 0) { print $1 }' /etc/passwd returned the following
+root
+",0.022780656814575195
+6.2.6,writable dir in root's executable path,FAIL,"The following writable directories were found in root's executable path
+/snap/bin is not a directory
+",0.4609665870666504
+6.2.7,all users' home directories exist,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_7.sh returned the following
+",0.09704136848449707
+6.2.8,Group or world-writable home directories,FAIL,"The following users have Group or world-writable home directories
+Other Read permission set on the home directory (/home/packer) of user packer
+Other Execute permission set on the home directory (/home/packer) of user packer
+Other Read permission set on the home directory (/home/azureuser) of user azureuser
+Other Execute permission set on the home directory (/home/azureuser) of user azureuser
+Other Read permission set on the home directory (/home/adminuser) of user adminuser
+Other Execute permission set on the home directory (/home/adminuser) of user adminuser
+",0.33661746978759766
+6.2.9,users own their home directories,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_9.sh returned the following
+",0.14584827423095703
+6.2.10,users' . files not group or world-writable,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_10.sh returned the following
+",0.5764832496643066
+6.2.11,no users have .forward files,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_11.sh returned the following
+",0.0799407958984375
+6.2.12,no users have .netrc files,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_12.sh returned the following
+",0.0800788402557373
+6.2.13,users' .netrc not group or world accessible,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_13.sh returned the following
+",0.08986878395080566
+6.2.14,no users have .rhosts files,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_14.sh returned the following
+",0.09248590469360352
+6.2.15,all groups in passwd exist in group,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_15.sh returned the following
+",0.29454612731933594
+6.2.16,no duplicate UIDs exist,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_16.sh returned the following
+",0.11565351486206055
+6.2.17,no duplicate GIDs exist,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_17.sh returned the following
+",0.10408949851989746
+6.2.18,no duplicate user names exist,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_18.sh returned the following
+",0.08886337280273438
+6.2.19,no duplicate group names exist,PASS,"executing https://github.com/Deepak710/SeBAz/blob/master/linux/scripts/ind/6_2_19.sh returned the following
+",0.08905649185180664
+6.2.20,users not assigned to shadow group,PASS,"grep ^shadow:[^:]*:[^:]*:[^:]+ /etc/group returned the following
+",0.012111186981201172
+"
+"
+---<DO NOT MODIFY ANYTHING BELOW>---
+"
+"
+Start Time (UTC): 2021-8-3 1:10:17
+Start Time (Local): 2021-8-3 11:10:17
+Options Given: 
+include,
+exclude,
+level,
+score,
+platform,
+auditor,
+org,
+unique,
+descript,
+dist,ind
+report,
+exp,
+verbose,False
+Finish Time (UTC): 2021-8-3 1:11:12
+Finish Time (Local): 2021-8-3 11:11:12
+Performed 237 tests in 54.727 seconds
+"109 tests passed, where 104 were Scored."
+This system's Score is 44%

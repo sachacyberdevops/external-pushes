@@ -1,0 +1,37 @@
+Start:		1627953019.2597294
+Command:	find /etc/ssh -xdev -type f -name 'ssh_host_*_key' -exec stat {} \;
+Output:
+  File: /etc/ssh/ssh_host_rsa_key
+  Size: 1823      	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 309         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.943666700 +1000
+Modify: 2021-08-03 11:03:51.155666700 +1000
+Change: 2021-08-03 11:03:51.155666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_dsa_key
+  Size: 1369      	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 752         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.427666700 +1000
+Modify: 2021-08-03 11:03:51.427666700 +1000
+Change: 2021-08-03 11:03:51.427666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_ed25519_key
+  Size: 399       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 919         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.947666700 +1000
+Modify: 2021-08-03 11:03:51.435666700 +1000
+Change: 2021-08-03 11:03:51.435666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_ecdsa_key
+  Size: 505       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 917         Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.943666700 +1000
+Modify: 2021-08-03 11:03:51.431666700 +1000
+Change: 2021-08-03 11:03:51.431666700 +1000
+ Birth: -
+
+End:		1627953019.2686226

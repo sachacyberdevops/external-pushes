@@ -1,0 +1,6 @@
+Start:		1627953018.9812036
+Command:	grep max_log_file_action /etc/audit/auditd.conf
+Output:
+max_log_file_action = ROTATE
+
+End:		1627953018.9841213

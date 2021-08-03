@@ -1,0 +1,5 @@
+Start:		1627953072.0109248
+Command:	grep ^shadow:[^:]*:[^:]*:[^:]+ /etc/group
+Output:
+
+End:		1627953072.0216866

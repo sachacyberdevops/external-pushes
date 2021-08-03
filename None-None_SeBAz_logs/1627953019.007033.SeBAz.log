@@ -1,0 +1,5 @@
+Start:		1627953019.0070987
+Command:	grep identity /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627953019.0100505

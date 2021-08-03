@@ -1,0 +1,5 @@
+Start:		1627953019.0934238
+Command:	grep scope /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627953019.096343

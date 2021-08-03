@@ -1,0 +1,7 @@
+Start:		1627953018.7969966
+Command:	stat /etc/hosts.allow | grep Access
+Output:
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 10:55:12.051652500 +1000
+
+End:		1627953018.8112075

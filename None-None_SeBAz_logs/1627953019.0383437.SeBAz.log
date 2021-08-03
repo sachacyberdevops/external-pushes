@@ -1,0 +1,5 @@
+Start:		1627953019.038413
+Command:	auditctl -l | grep -E '(session|logins)'
+Output:
+
+End:		1627953019.0423777

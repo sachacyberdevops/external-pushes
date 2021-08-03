@@ -1,0 +1,5 @@
+Start:		1627953019.1042526
+Command:	auditctl -l | grep actions
+Output:
+
+End:		1627953019.108175

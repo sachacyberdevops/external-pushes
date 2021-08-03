@@ -1,0 +1,7 @@
+Start:		1627953018.2362967
+Command:	cat /etc/issue
+Output:
+Ubuntu 18.04.5 LTS \n \l
+
+
+End:		1627953018.2428563

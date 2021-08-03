@@ -1,0 +1,6 @@
+Start:		1627953018.3046706
+Command:	grep -R "^chargen" /etc/inetd.*
+Output:
+grep: /etc/inetd.*: No such file or directory
+
+End:		1627953018.3301082

@@ -1,0 +1,14 @@
+Start:		1627953018.2503166
+Command:	cat /etc/issue.net
+Output:
+###############################################################################
+#This system is the property of Accenture, and is to be used in accordance    #
+#with applicable Accenture Policies.  Unauthorized access or activity is a    #
+#violation of Accenture Policies and may be a violation of law.  Use of this  #
+#system constitutes consent to monitoring or unauthorized use, in accordance  #
+#with Accenture Policies, local laws, and regulations.  Unauthorized use may  #
+#result in penalties including, but not limited to, reprimand, dismissal,     #
+#financial penalties, and legal action.                                       #
+###############################################################################
+
+End:		1627953018.2663548

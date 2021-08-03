@@ -1,0 +1,5 @@
+Start:		1627953019.48483
+Command:	cat /etc/pam.d/common-password | grep remember=
+Output:
+
+End:		1627953019.4887135

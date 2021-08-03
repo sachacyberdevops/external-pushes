@@ -1,0 +1,5 @@
+Start:		1627953018.0246618
+Command:	mount | grep /home
+Output:
+
+End:		1627953018.04703

@@ -1,0 +1,5 @@
+Start:		1627953071.2951245
+Command:	grep '^\+:' /etc/passwd
+Output:
+
+End:		1627953071.317153

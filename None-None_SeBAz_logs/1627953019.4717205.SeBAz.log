@@ -1,0 +1,6 @@
+Start:		1627953019.4717894
+Command:	cat /etc/security/pwquality.conf
+Output:
+cat: /etc/security/pwquality.conf: No such file or directory
+
+End:		1627953019.474538

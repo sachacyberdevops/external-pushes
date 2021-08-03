@@ -1,0 +1,5 @@
+Start:		1627953019.0511262
+Command:	grep access /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627953019.0540464

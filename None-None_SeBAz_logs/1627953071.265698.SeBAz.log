@@ -1,0 +1,15 @@
+Start:		1627953071.2657955
+Command:	df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -2000
+Output:
+/sbin/pam_extrausers_chkpwd
+/sbin/unix_chkpwd
+/usr/bin/crontab
+/usr/bin/mlocate
+/usr/bin/bsd-write
+/usr/bin/at
+/usr/bin/expiry
+/usr/bin/chage
+/usr/bin/wall
+/usr/lib/x86_64-linux-gnu/utempter/utempter
+
+End:		1627953072.187831

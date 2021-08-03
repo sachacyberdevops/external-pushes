@@ -1,0 +1,5 @@
+Start:		1627953019.4554703
+Command:	cat /etc/pam.d/common-password | grep -E "password required pam_cracklib.so"
+Output:
+
+End:		1627953019.4594133

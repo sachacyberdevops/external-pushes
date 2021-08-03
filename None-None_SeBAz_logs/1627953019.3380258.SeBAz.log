@@ -1,0 +1,6 @@
+Start:		1627953019.3380938
+Command:	sshd -T | grep permitrootlogin
+Output:
+permitrootlogin no
+
+End:		1627953019.3445916

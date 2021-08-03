@@ -1,0 +1,6 @@
+Start:		1627953018.7492654
+Command:	sysctl net.ipv4.icmp_echo_ignore_broadcasts
+Output:
+net.ipv4.icmp_echo_ignore_broadcasts = 0
+
+End:		1627953018.7574947

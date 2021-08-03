@@ -1,0 +1,5 @@
+Start:		1627953019.0027575
+Command:	auditctl -l | grep time-change
+Output:
+
+End:		1627953019.006843

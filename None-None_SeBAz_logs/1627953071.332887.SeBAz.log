@@ -1,0 +1,5 @@
+Start:		1627953071.3330026
+Command:	grep '^\+:' /etc/group
+Output:
+
+End:		1627953071.3535745

@@ -1,0 +1,6 @@
+Start:		1627953018.7261913
+Command:	sysctl net.ipv6.conf.default.accept_source_route
+Output:
+net.ipv6.conf.default.accept_source_route = 0
+
+End:		1627953018.7381778

@@ -1,0 +1,6 @@
+Start:		1627953019.3595529
+Command:	sshd -T | grep ciphers
+Output:
+ciphers chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com
+
+End:		1627953019.3660293

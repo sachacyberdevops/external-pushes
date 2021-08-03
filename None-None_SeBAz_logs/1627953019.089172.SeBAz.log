@@ -1,0 +1,5 @@
+Start:		1627953019.08924
+Command:	auditctl -l | grep delete
+Output:
+
+End:		1627953019.093168

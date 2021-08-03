@@ -1,0 +1,5 @@
+Start:		1627953017.9771042
+Command:	mount | grep -E '\s/var\s'
+Output:
+
+End:		1627953018.000204

@@ -1,0 +1,5 @@
+Start:		1627953017.966389
+Command:	mount | grep -E '\s/tmp\s' | grep -v nosuid
+Output:
+
+End:		1627953017.9944751

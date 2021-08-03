@@ -1,0 +1,5 @@
+Start:		1627953019.0820014
+Command:	auditctl -l | grep mounts
+Output:
+
+End:		1627953019.0859354

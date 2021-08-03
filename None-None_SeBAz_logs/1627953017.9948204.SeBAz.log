@@ -1,0 +1,5 @@
+Start:		1627953017.9949415
+Command:	mount | grep /var/tmp
+Output:
+
+End:		1627953018.0218773

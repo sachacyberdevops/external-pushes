@@ -1,0 +1,6 @@
+Start:		1627953018.2285583
+Command:	cat /etc/motd
+Output:
+cat: /etc/motd: No such file or directory
+
+End:		1627953018.235993

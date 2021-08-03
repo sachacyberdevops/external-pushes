@@ -1,0 +1,5 @@
+Start:		1627953019.1658475
+Command:	grep "^*.*[^I][^I]*@" /etc/rsyslog.conf /etc/rsyslog.d/*.conf
+Output:
+
+End:		1627953019.1688192

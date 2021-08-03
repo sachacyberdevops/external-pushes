@@ -1,0 +1,6 @@
+Start:		1627953018.9614904
+Command:	iwconfig
+Output:
+/bin/bash: iwconfig: command not found
+
+End:		1627953018.9636154

@@ -1,0 +1,5 @@
+Start:		1627953019.042631
+Command:	grep perm_mod /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627953019.04557

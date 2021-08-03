@@ -1,0 +1,5 @@
+Start:		1627953019.0239098
+Command:	auditctl -l | grep MAC-policy
+Output:
+
+End:		1627953019.0278764

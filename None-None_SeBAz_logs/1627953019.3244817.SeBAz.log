@@ -1,0 +1,6 @@
+Start:		1627953019.3245497
+Command:	sshd -T | grep ignorerhosts
+Output:
+ignorerhosts yes
+
+End:		1627953019.3309834

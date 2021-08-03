@@ -1,0 +1,7 @@
+Start:		1627953018.2902522
+Command:	stat /etc/issue.net | grep Access
+Output:
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:06:04.098254499 +1000
+
+End:		1627953018.313119

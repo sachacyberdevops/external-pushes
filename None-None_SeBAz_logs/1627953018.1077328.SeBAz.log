@@ -1,0 +1,5 @@
+Start:		1627953018.1078546
+Command:	crontab -u root -l | grep aide
+Output:
+
+End:		1627953018.1479595

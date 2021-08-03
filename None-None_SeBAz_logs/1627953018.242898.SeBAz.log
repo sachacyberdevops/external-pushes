@@ -1,0 +1,6 @@
+Start:		1627953018.2429643
+Command:	grep -E -i "(\v|\r|\m|\s|$(grep '^ID=' /etc/os-release | cut -d= -f2 | sed -e 's/"//g'))" /etc/issue
+Output:
+Ubuntu 18.04.5 LTS \n \l
+
+End:		1627953018.264838

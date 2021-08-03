@@ -1,0 +1,6 @@
+Start:		1627953018.4091613
+Command:	systemctl is-enabled systemd-timesyncd.service
+Output:
+enabled
+
+End:		1627953018.4349103

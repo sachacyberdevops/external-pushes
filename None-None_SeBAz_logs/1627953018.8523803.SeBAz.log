@@ -1,0 +1,8 @@
+Start:		1627953018.8524902
+Command:	ip6tables -L | grep Chain
+Output:
+Chain INPUT (policy ACCEPT)
+Chain FORWARD (policy ACCEPT)
+Chain OUTPUT (policy ACCEPT)
+
+End:		1627953018.9093282

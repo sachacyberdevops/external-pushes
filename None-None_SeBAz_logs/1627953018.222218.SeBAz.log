@@ -1,0 +1,30 @@
+Start:		1627953018.2222884
+Command:	apparmor_status
+Output:
+apparmor module is loaded.
+16 profiles are loaded.
+16 profiles are in enforce mode.
+   /sbin/dhclient
+   /usr/bin/freshclam
+   /usr/bin/lxc-start
+   /usr/bin/man
+   /usr/lib/NetworkManager/nm-dhcp-client.action
+   /usr/lib/NetworkManager/nm-dhcp-helper
+   /usr/lib/connman/scripts/dhclient-script
+   /usr/lib/snapd/snap-confine
+   /usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /usr/sbin/tcpdump
+   lxc-container-default
+   lxc-container-default-cgns
+   lxc-container-default-with-mounting
+   lxc-container-default-with-nesting
+   man_filter
+   man_groff
+0 profiles are in complain mode.
+1 processes have profiles defined.
+1 processes are in enforce mode.
+   /usr/bin/freshclam (1097) 
+0 processes are in complain mode.
+0 processes are unconfined but have a profile defined.
+
+End:		1627953018.6125808

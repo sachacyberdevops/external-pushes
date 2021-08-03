@@ -1,0 +1,7 @@
+Start:		1627953018.9718876
+Command:	grep space_left_action /etc/audit/auditd.conf
+Output:
+space_left_action = SYSLOG
+admin_space_left_action = SUSPEND
+
+End:		1627953018.974796

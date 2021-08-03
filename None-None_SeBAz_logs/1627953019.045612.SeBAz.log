@@ -1,0 +1,5 @@
+Start:		1627953019.045683
+Command:	auditctl -l | grep perm_mod
+Output:
+
+End:		1627953019.0496018

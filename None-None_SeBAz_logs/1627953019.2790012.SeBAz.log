@@ -1,0 +1,37 @@
+Start:		1627953019.2790706
+Command:	find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' -exec stat {} \;
+Output:
+  File: /etc/ssh/ssh_host_ed25519_key.pub
+  Size: 92        	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 1563        Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.439666700 +1000
+Modify: 2021-08-03 11:03:51.435666700 +1000
+Change: 2021-08-03 11:03:51.435666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_dsa_key.pub
+  Size: 600       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 773         Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:59.655666700 +1000
+Modify: 2021-08-03 11:03:51.427666700 +1000
+Change: 2021-08-03 11:03:51.427666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_rsa_key.pub
+  Size: 392       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 726         Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.439666700 +1000
+Modify: 2021-08-03 11:03:51.155666700 +1000
+Change: 2021-08-03 11:03:51.155666700 +1000
+ Birth: -
+  File: /etc/ssh/ssh_host_ecdsa_key.pub
+  Size: 172       	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 918         Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-08-03 11:03:51.439666700 +1000
+Modify: 2021-08-03 11:03:51.431666700 +1000
+Change: 2021-08-03 11:03:51.431666700 +1000
+ Birth: -
+
+End:		1627953019.2883759

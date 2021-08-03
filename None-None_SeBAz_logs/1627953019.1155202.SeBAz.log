@@ -1,0 +1,6 @@
+Start:		1627953019.1155887
+Command:	grep "^\s*[^#]" /etc/audit/rules.d/*.rules | tail -1
+Output:
+-f 1
+
+End:		1627953019.138058

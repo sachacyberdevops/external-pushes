@@ -1,0 +1,5 @@
+Start:		1627953018.8234746
+Command:	lsmod | grep sctp
+Output:
+
+End:		1627953018.844304

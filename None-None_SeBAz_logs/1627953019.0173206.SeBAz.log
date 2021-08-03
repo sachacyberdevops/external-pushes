@@ -1,0 +1,6 @@
+Start:		1627953019.01739
+Command:	auditctl -l | grepsystem-locale
+Output:
+/bin/bash: grepsystem-locale: command not found
+
+End:		1627953019.0206974

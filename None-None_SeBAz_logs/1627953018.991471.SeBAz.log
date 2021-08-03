@@ -1,0 +1,12 @@
+Start:		1627953018.991541
+Command:	ls /etc/rc*.d | grep auditd
+Output:
+K01auditd
+K01auditd
+S01auditd
+S01auditd
+S01auditd
+S01auditd
+K01auditd
+
+End:		1627953018.996223

@@ -1,0 +1,5 @@
+Start:		1627953019.4146569
+Command:	sshd -T | grep denygroups
+Output:
+
+End:		1627953019.4212341

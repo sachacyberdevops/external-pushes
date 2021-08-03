@@ -1,0 +1,11 @@
+Start:		1627953071.4383981
+Command:	./home_directory_permissions.sh
+Output:
+Other Read permission set on the home directory (/home/packer) of user packer
+Other Execute permission set on the home directory (/home/packer) of user packer
+Other Read permission set on the home directory (/home/azureuser) of user azureuser
+Other Execute permission set on the home directory (/home/azureuser) of user azureuser
+Other Read permission set on the home directory (/home/adminuser) of user adminuser
+Other Execute permission set on the home directory (/home/adminuser) of user adminuser
+
+End:		1627953071.7011917

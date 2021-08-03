@@ -1,0 +1,6 @@
+Start:		1627953018.1847222
+Command:	grep SELINUX=enforcing /etc/selinux/config
+Output:
+grep: /etc/selinux/config: No such file or directory
+
+End:		1627953018.1889005

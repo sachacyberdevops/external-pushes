@@ -1,0 +1,7 @@
+Start:		1627953018.6589634
+Command:	grep "net\.ipv6\.conf\.all\.forwarding" /etc/sysctl.conf /etc/sysctl.d/*
+Output:
+/etc/sysctl.conf:#net.ipv6.conf.all.forwarding=1
+/etc/sysctl.d/99-sysctl.conf:#net.ipv6.conf.all.forwarding=1
+
+End:		1627953018.6682997

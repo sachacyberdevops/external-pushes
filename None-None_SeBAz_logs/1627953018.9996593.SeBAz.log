@@ -1,0 +1,5 @@
+Start:		1627953018.9997263
+Command:	grep time-change /etc/audit/rules.d/*.rules
+Output:
+
+End:		1627953019.002646

@@ -1,0 +1,6 @@
+Start:		1627953018.4483678
+Command:	timedatectl status
+Output:
+Failed to query server: Failed to activate service 'org.freedesktop.timedate1': timed out (service_start_timeout=25000ms)
+
+End:		1627953043.4976993

@@ -1,0 +1,5 @@
+Start:		1627953018.208203
+Command:	ps -eZ | grep -E "initrc" | grep -E -v -w "tr|ps|grep|bash|awk" | tr ':' ' ' | awk '{ print $NF }'
+Output:
+
+End:		1627953018.297608

@@ -1,0 +1,5 @@
+Start:		1627953071.340713
+Command:	find /dev/sdb1 -xdev -type f -perm -0002
+Output:
+
+End:		1627953071.3576121

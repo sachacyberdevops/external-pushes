@@ -1,0 +1,5 @@
+Start:		1627953071.3565016
+Command:	find /dev/sdb1 -xdev -nouser
+Output:
+
+End:		1627953071.3787265
